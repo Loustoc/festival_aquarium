@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.4.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns:svgjs="http://svgjs.com/svgjs"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1163.9 210.3"
+	 style="enable-background:new 0 0 1163.9 210.3;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_00000041979698689185153140000001061621884414057660_);}
+	.st2{fill:url(#SVGID_00000101103661959814208200000004642338686875716263_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="193.9895" y1="-4.726" x2="193.9895" y2="217.0333">
+	<stop  offset="0" style="stop-color:#6B9AC4"/>
+	<stop  offset="0.9993" style="stop-color:#2B4162"/>
+</linearGradient>
+<path class="st0" d="M194,0C109.3,0,84.2,46.5,70.5,60C54,76.1,21.2,87.1,0,84v126.3h194h0h194V84c-21.2,3.1-51.2-7.7-70.5-24.1
+	C306.7,50.9,278.7,0,194,0"/>
+<linearGradient id="SVGID_00000013878232134414175420000008490285364437848750_" gradientUnits="userSpaceOnUse" x1="581.9684" y1="-4.726" x2="581.9684" y2="217.0333">
+	<stop  offset="0" style="stop-color:#6B9AC4"/>
+	<stop  offset="0.9993" style="stop-color:#2B4162"/>
+</linearGradient>
+<path style="fill:url(#SVGID_00000013878232134414175420000008490285364437848750_);" d="M582,0c-84.7,0-109.8,46.5-123.5,60
+	C442,76.1,409.2,87.1,388,84v126.3h194h0h194V84c-21.2,3.1-51.2-7.7-70.5-24.1C694.7,50.9,666.7,0,582,0"/>
+<linearGradient id="SVGID_00000084497790498676244550000011169307945282215598_" gradientUnits="userSpaceOnUse" x1="969.9473" y1="-4.726" x2="969.9473" y2="217.0333">
+	<stop  offset="0" style="stop-color:#6B9AC4"/>
+	<stop  offset="0.9993" style="stop-color:#2B4162"/>
+</linearGradient>
+<path style="fill:url(#SVGID_00000084497790498676244550000011169307945282215598_);" d="M969.9,0c-84.7,0-109.8,46.5-123.5,60
+	C830,76.1,797.1,87.1,776,84v126.3h194h0h194V84c-21.2,3.1-51.2-7.7-70.5-24.1C1082.7,50.9,1054.7,0,969.9,0"/>
+</svg>

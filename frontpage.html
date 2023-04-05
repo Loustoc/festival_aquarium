@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui' />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="frontpage.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.arctext.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="effects.js"></script><script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <title>Frontpage</title>
+</head>
+<body>
+    <div class="flou_nav_open"></div>
+
+    <div id="languette"></div>
+    <!-- <img id="about_wave" src="/img/wave.svg" alt=""> -->
+    <nav class="invisible">
+        <div class="logo_nav">
+            <div class="invisible logo_container">
+                <object
+                data="img/aquarium_logo_new.svg"
+                type="image/svg+xml"
+                id="logo"
+                width="20%"
+                ></object>
+                <!-- ne pas oublier de changer la valeur de sizelogo si width changée -->
+            </div>
+            
+            <script src="paup.js"></script>
+            <script src="yeux_mouse_follow.js"></script>
+    
+    <ul class="nav_desktop">
+        <li class="about" onclick="vague_apropos()">A PROPOS
+        </li>
+        <li>
+            BILLETTERIE
+        </li>
+        <li class="lineup" onclick="lineup()">
+            LINE-UP
+        </li>
+    </ul>
+    <ul class="nav_mobile">
+        <div class="circles_container">
+        <div  style="transform: translateY(10px)" class="circle_nav about_circle">
+            
+            <div style="transform: translateY(10px);" class="circle_nav lineup_circle">
+               
+                <div class="circle_nav billetterie_circle">
+                    <li id="b">BILLETTERIE</li>
+                </div>
+            </div><li style="transform: translateY(-25px);" id="l" onclick="lineup()">LINE-UP</li></div>
+            <li style="transform: translateY(-25px);" id="about_curve"  class="about" onclick="vague_apropos()">A PROPOS</li></div>
+        
+<!--        
+        <li class="about" onclick="vague_apropos()">A PROPOS
+        </li>
+        <li>
+            BILLETTERIE
+        </li>
+        <li>
+            LINE-UP
+        </li> -->
+    </ul>
+    <script src="nav.js"></script>
+</div>
+
+</nav>
+</div>
+<div>
+    <video  style="filter:blur(4px)" class="background_vid" src="vid_back.mp4"></video>
+    <script>
+      window.onload=(event)=>{
+      if (window.innerWidth > 932)
+        {
+          document.querySelector(".background_vid").style.top= - 300 - ((window.innerWidth - 932)*(1670/932)) +  (((window.innerWidth - 932)*(1670/932))/1670 )*800 + "px";
+          // permet de localiser le point de scale
+        }
+      }
+      window.onresize= (event)=>
+      {
+        if (window.innerWidth > 932)
+        {
+          document.querySelector(".background_vid").style.top= - 300 - ((window.innerWidth - 932)*(1670/932)) +  (((window.innerWidth - 932)*(1670/932))/1670 )*800 + "px";
+          // permet de localiser le point de scale
+        }
+      }
+    </script>
+</div>
+
+</div>
+<main>
+<article class="start_article">
+  <div class="waves">
+  <!-- <img src="img/waves/waves.svg" style="filter: hue-rotate(-30deg);"class="waves_animation" alt="">
+  <img src="img/waves/waves_2.svg" style="filter: hue-rotate(-36deg);" class="waves_animation" alt="">
+  <img src="img/waves/waves_3.svg" style="filter: hue-rotate(-42deg);"  class="waves_animation" alt="">
+  <img src="img/waves/waves_4.svg" style="filter: hue-rotate(-48deg);" class="waves_animation" alt="">
+  <img src="img/waves/waves_5.svg" style="filter: hue-rotate(-48deg);" class="waves_animation" alt="">
+
+  <img src="img/waves/waves_6.svg" style="filter: hue-rotate(-48deg);" class=" waves_animation" alt="">
+  <img src="img/waves/waves_7.svg" style="filter: hue-rotate(-48deg);" class=" waves_animation" alt="">
+  <img src="img/waves/waves_8.svg" style="filter: hue-rotate(-48deg);" class="waves_animation" alt="">
+  <img src="img/waves/waves_9.svg" style="filter: hue-rotate(-48deg);" class="waves_animation" alt="">
+  <img src="img/waves/waves_10.svg" style="filter: hue-rotate(-48deg);" class="waves_animation" alt=""> -->
+  <img src="img/waves/waves.svg" class="wave_1 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_2 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_1 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_2  waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_1 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_2 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_1 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_2 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_1 waves_animation" alt="">
+  <img src="img/waves/waves.svg" class="wave_2 waves_animation" alt="">
+
+
+
+
+
+</div>
+  <div class="dates_lieu">
+  <div class="content" style="margin: 0 auto;">
+  <h6>17 et 18 juin</h6>
+  <h6>17 et 18 juin</h6>
+</div>
+<div class="lieu">Bray-Dunes</div>
+</div>
+<div class="soutiens">
+<h5>Ils nous soutiennent</h5>
+<div class="logos_org_container">
+  <img src="img/logos/wwf.svg" alt="">
+  <img src="img/logos/gp.svg" alt="">
+  <img src="img/logos/zw.svg" alt="">
+  <img src="img/logos/seashep.svg" alt="">
+</div>
+</div>
+</article>
+
+<article class="lineup_article">
+  <h1 class="aristes_h1">Artistes</h1>
+    <div class="swiper-container mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/angele344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Angèle</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/billie344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Billie Eilish</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/coldplay344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Coldplay</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/gojira344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Gojira</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/lorenzo344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Lorenzo</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/maroon5_344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Maroon 5</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/moby344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Moby</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/orelsan344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Orelsan</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/pomme344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Pomme</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/rhcp344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Red Hot Chili Peppers</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        <div class="swiper-slide">
+          <div class="artiste_info">
+          <div class="imgcontainer">
+          <img class="hublot" src="img/hublot.svg" alt="">
+            
+          <img class="img_artiste" src="img/artistes/sting344.png"
+           alt=""/> 
+          </div>
+          <h1 class="ml6">
+              <span class="text-wrapper">
+                <span class="letters">Sting</span>
+              </span>
+            </h1>
+          </div>
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+              <script src="carousels.js"></script>  -->
+        </div>
+        
+      </div>
+      <!-- <div style="scale: 0.5;" class="swiper-button-next"></div> -->
+      <!-- <div style="scale: 0.5;" class="swiper-button-prev"></div> -->
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+       var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+         // Responsive breakpoints
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    580: {
+      slidesPerView: 2,
+      spaceBetween: 30
+    },
+    // when window width is >= 640px
+  900: {
+      slidesPerView: 3,
+      spaceBetween: 40
+    }
+  },
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      });
+   
+      
+    </script>
+    </div>
+    </div>
+      </div>
+      <script src="carousels.js"></script>
+</div>
+</article>
+
+<article class="infos">
+  <img src="img/carte_festival_fullVec.svg" alt="">
+</article>
+
+<script src="frontpage.js"></script>
+</main>
+
+</body>
+</html>
