@@ -29,20 +29,19 @@ window.addEventListener("touchmove", (e) => {
     if (offset_y < 0 && current_state != 0) {
       current_state--;
       if (current_state == 0) {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
           document.querySelector("main").classList.remove("main_scroll" + i);
         }
       } else {
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
           document.querySelector("main").classList.remove("main_scroll" + i);
         }
         document
           .querySelector("main")
           .classList.toggle("main_scroll" + current_state);
       }
-    }
-    else {
-      if (current_state != 2) {
+    } else {
+      if (current_state != 3) {
         current_state++;
         document
           .querySelector("main")
@@ -52,7 +51,7 @@ window.addEventListener("touchmove", (e) => {
           .classList.toggle("main_scroll" + current_state - 1);
       }
     }
-  // }
+    // }
     scrolling = 1;
     console.log(e.deltaY);
     setTimeout(function () {
@@ -71,24 +70,34 @@ window.addEventListener("touchmove", (e) => {
 //       .querySelector("main")
 //       .classList.toggle("main_scroll" + current_state);
 //   }
-  
-// });
-function apropos(){
-      current_state=2;
-      for (let i = 0; i < 3; i++) {
-        document.querySelector("main").classList.remove("main_scroll" + i);
-      }
-      document
-      .querySelector("main")
-      .classList.toggle("main_scroll" + current_state);
-  }
 
-  function lineup(){
-    current_state=1;
-    for (let i = 0; i < 3; i++) {
-      document.querySelector("main").classList.remove("main_scroll" + i);
-    }
-    document
+// });
+function apropos() {
+  current_state = 2;
+  for (let i = 0; i < 4; i++) {
+    document.querySelector("main").classList.remove("main_scroll" + i);
+  }
+  document
+    .querySelector("main")
+    .classList.toggle("main_scroll" + current_state);
+}
+
+function lineup() {
+  current_state = 1;
+  for (let i = 0; i < 4; i++) {
+    document.querySelector("main").classList.remove("main_scroll" + i);
+  }
+  document
+    .querySelector("main")
+    .classList.toggle("main_scroll" + current_state);
+}
+
+function billetterie() {
+  current_state = 3;
+  for (let i = 0; i < 4; i++) {
+    document.querySelector("main").classList.remove("main_scroll" + i);
+  }
+  document
     .querySelector("main")
     .classList.toggle("main_scroll" + current_state);
 }
