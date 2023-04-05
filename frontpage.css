@@ -721,3 +721,7 @@ animation-duration: 6s;
   transform: translateY(calc(var(--vh, 1vh) * -1 * 200)) !important;
   transition: 1s;
 }
+
+.infos{
+  padding-top: 200px;
+}
