@@ -716,5 +716,8 @@ animation-duration: 6s;
 .main_scroll1{
   transform: translateY(calc(var(--vh, 1vh) * -1 * 100)) !important;
   transition: 1s;
-
+}
+.main_scroll2{
+  transform: translateY(calc(var(--vh, 1vh) * -1 * 200)) !important;
+  transition: 1s;
 }

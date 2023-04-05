@@ -14,44 +14,48 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 var scrolling = 0;
-var y_start=0;
-var offset_y=0;
+var y_start = 0;
+var offset_y = 0;
 var current_state = 0;
 window.addEventListener("touchstart", (e) => {
-    y_start = e.touches[0].pageY;
-}
-);
+  y_start = e.touches[0].pageY;
+});
 
 window.addEventListener("touchmove", (e) => {
   if (scrolling == 0) {
     offset_y = y_start - e.touches[0].pageY;
     console.log(offset_y);
-    if (offset_y<0 && current_state!=0){
-        current_state--;
-        if (current_state==0){
-            for (let i=0; i<4;i++){
-    document.querySelector("main").classList.remove("main_scroll"+i);}
-            }
-    else{
-        for (let i=0; i<4;i++){
-            document.querySelector("main").classList.remove("main_scroll"+i);}
-            document.querySelector("main").classList.toggle("main_scroll"+current_state);}
-
-    }
-//test
-    else{
-        if (current_state != 1){
-        current_state++
-        document.querySelector("main").classList.toggle("main_scroll"+current_state);
-        document.querySelector("main").classList.toggle("main_scroll"+current_state-1);
-
-
+    if (offset_y < 0 && current_state != 0) {
+      current_state--;
+      if (current_state == 0) {
+        for (let i = 0; i < 3; i++) {
+          document.querySelector("main").classList.remove("main_scroll" + i);
         }
+      } else {
+        for (let i = 0; i < 3; i++) {
+          document.querySelector("main").classList.remove("main_scroll" + i);
+        }
+        document
+          .querySelector("main")
+          .classList.toggle("main_scroll" + current_state);
+      }
+    }
+    //test
+    else {
+      if (current_state != 2) {
+        current_state++;
+        document
+          .querySelector("main")
+          .classList.toggle("main_scroll" + current_state);
+        document
+          .querySelector("main")
+          .classList.toggle("main_scroll" + current_state - 1);
+      }
     }
     scrolling = 1;
     console.log(e.deltaY);
     setTimeout(function () {
       scrolling = 0;
     }, 1500);
-}
-  });
+  }
+});
