@@ -41,7 +41,6 @@ window.addEventListener("touchmove", (e) => {
           .classList.toggle("main_scroll" + current_state);
       }
     }
-    //test
     else {
       if (current_state != 2) {
         current_state++;
@@ -61,3 +60,35 @@ window.addEventListener("touchmove", (e) => {
     }, 1300);
   }
 });
+
+// window.addEventListener("click", function (e) {
+//   if (e.target.classList.contains("about")) {
+//       current_state=2;
+//       for (let i = 0; i < 3; i++) {
+//         document.querySelector("main").classList.remove("main_scroll" + i);
+//       }
+//       document
+//       .querySelector("main")
+//       .classList.toggle("main_scroll" + current_state);
+//   }
+  
+// });
+function apropos(){
+      current_state=2;
+      for (let i = 0; i < 3; i++) {
+        document.querySelector("main").classList.remove("main_scroll" + i);
+      }
+      document
+      .querySelector("main")
+      .classList.toggle("main_scroll" + current_state);
+  }
+
+  function lineup(){
+    current_state=1;
+    for (let i = 0; i < 3; i++) {
+      document.querySelector("main").classList.remove("main_scroll" + i);
+    }
+    document
+    .querySelector("main")
+    .classList.toggle("main_scroll" + current_state);
+}
