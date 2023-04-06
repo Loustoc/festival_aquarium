@@ -143,3 +143,19 @@ function billetterie() {
     .querySelector("main")
     .classList.toggle("main_scroll" + current_state);
 }
+
+function engagement(){
+  document.querySelector(".engag").classList.toggle("info_visible");
+}
+
+function funds(){
+  document.querySelector(".funds").classList.toggle("info_visible");
+}
+
+function reco(){
+  document.querySelector(".reco").classList.toggle("info_visible");
+}
+
+function carte(){
+  document.querySelector(".map").classList.toggle("info_visible");
+}
