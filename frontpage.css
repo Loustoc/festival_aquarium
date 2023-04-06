@@ -746,19 +746,20 @@ article {
   justify-content: start;
   gap: 30px;
 }
-.container_infos{
-  transform: translateY(calc((100vh - 300px ) / 2  - 50%));
+.container_infos {
+  transform: translateY(calc((100vh - 300px) / 2 - 50%));
   display: flex;
-  gap:30px;
+  gap: 30px;
   flex-direction: column;
 }
 .info_bubble {
   position: fixed;
+  flex-direction: column;
   width: 70vw;
   transition: 1s;
   height: 100px;
   background-color: #30405f;
-  transform: translate(-85vw, 120px);
+  transform: translate(-140vw, 120px);
   display: flex;
   justify-content: center;
   align-items: center;
