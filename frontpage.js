@@ -60,6 +60,48 @@ window.addEventListener("touchmove", (e) => {
   }
 });
 
+addEventListener("wheel", (e) => {
+  // console.log(e.deltaY);
+  offset_scroll = e.deltaY;
+  if (scrolling == 0) {
+    console.log(offset_y);
+  console.log("test");
+
+    if (offset_scroll < 0 && current_state != 0) {
+      current_state--;
+      if (current_state == 0) {
+        for (let i = 0; i < 4; i++) {
+          document.querySelector("main").classList.remove("main_scroll" + i);
+        }
+      } else {
+        for (let i = 0; i < 4; i++) {
+          document.querySelector("main").classList.remove("main_scroll" + i);
+        }
+        document
+          .querySelector("main")
+          .classList.toggle("main_scroll" + current_state);
+      }
+    } else {
+      if (current_state != 3) {
+        current_state++;
+        document
+          .querySelector("main")
+          .classList.toggle("main_scroll" + current_state);
+        document
+          .querySelector("main")
+          .classList.toggle("main_scroll" + current_state - 1);
+      }
+    }
+    
+    scrolling = 1;
+    console.log(e.deltaY);
+    setTimeout(function () {
+      scrolling = 0;
+    }, 1300);
+  }
+});
+
+
 // window.addEventListener("click", function (e) {
 //   if (e.target.classList.contains("about")) {
 //       current_state=2;
