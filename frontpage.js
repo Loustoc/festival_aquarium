@@ -25,32 +25,32 @@ window.addEventListener("touchmove", (e) => {
   if (scrolling == 0) {
     offset_y = y_start - e.touches[0].pageY;
     console.log(offset_y);
-    if (Math.abs(offset_y)>10){
-    if (offset_y < 0 && current_state != 0) {
-      current_state--;
-      if (current_state == 0) {
-        for (let i = 0; i < 4; i++) {
-          document.querySelector("main").classList.remove("main_scroll" + i);
+    if (Math.abs(offset_y) > 10) {
+      if (offset_y < 0 && current_state != 0) {
+        current_state--;
+        if (current_state == 0) {
+          for (let i = 0; i < 4; i++) {
+            document.querySelector("main").classList.remove("main_scroll" + i);
+          }
+        } else {
+          for (let i = 0; i < 4; i++) {
+            document.querySelector("main").classList.remove("main_scroll" + i);
+          }
+          document
+            .querySelector("main")
+            .classList.toggle("main_scroll" + current_state);
         }
       } else {
-        for (let i = 0; i < 4; i++) {
-          document.querySelector("main").classList.remove("main_scroll" + i);
+        if (current_state != 3) {
+          current_state++;
+          document
+            .querySelector("main")
+            .classList.toggle("main_scroll" + current_state);
+          document
+            .querySelector("main")
+            .classList.toggle("main_scroll" + current_state - 1);
         }
-        document
-          .querySelector("main")
-          .classList.toggle("main_scroll" + current_state);
       }
-    } else {
-      if (current_state != 3) {
-        current_state++;
-        document
-          .querySelector("main")
-          .classList.toggle("main_scroll" + current_state);
-        document
-          .querySelector("main")
-          .classList.toggle("main_scroll" + current_state - 1);
-      }
-    }
     }
     scrolling = 1;
     console.log(e.deltaY);
@@ -65,7 +65,7 @@ addEventListener("wheel", (e) => {
   offset_scroll = e.deltaY;
   if (scrolling == 0) {
     console.log(offset_y);
-  console.log("test");
+    console.log("test");
 
     if (offset_scroll < 0 && current_state != 0) {
       current_state--;
@@ -92,7 +92,7 @@ addEventListener("wheel", (e) => {
           .classList.toggle("main_scroll" + current_state - 1);
       }
     }
-    
+
     scrolling = 1;
     console.log(e.deltaY);
     setTimeout(function () {
@@ -100,7 +100,6 @@ addEventListener("wheel", (e) => {
     }, 1300);
   }
 });
-
 
 // window.addEventListener("click", function (e) {
 //   if (e.target.classList.contains("about")) {
@@ -144,23 +143,23 @@ function billetterie() {
     .classList.toggle("main_scroll" + current_state);
 }
 
-function engagement(){
+function engagement() {
   document.querySelector(".engag").classList.toggle("info_visible");
 }
 
-function funds(){
+function funds() {
   document.querySelector(".funds").classList.toggle("info_visible");
 }
 
-function reco(){
+function reco() {
   document.querySelector(".reco").classList.toggle("info_visible");
 }
 
-function carte(){
+function carte() {
   document.querySelector(".map").classList.toggle("info_visible");
 }
 
-function close_info(e){
+function close_info(e) {
   console.log(e.target);
   e.target.parentNode.classList.toggle("info_visible");
 }
