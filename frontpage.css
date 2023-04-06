@@ -865,7 +865,7 @@ text-align: center;
   height: 30px;
   border-radius: 50%;
   width: 30px;
-  background-color:#b8dcff9b;
+  background-color:#b8dcff58;
   position: absolute;
 }
 .date_deux{
@@ -874,8 +874,8 @@ text-align: center;
 }
 .achat_billet{
   margin: 10px;
-  border-radius: 29999999px;
-  background-color: #264a92;
+  border-radius: 10px;
+  background-color: #264a9291;
   width: 100px;
   height: 30px;
   display: flex;
