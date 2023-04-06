@@ -764,6 +764,10 @@ article {
   transition: 1s;
 }
 
+.img_reco{
+  width: 70vw;
+}
+
 .info{
   height: 50px;
   width: 70vw;

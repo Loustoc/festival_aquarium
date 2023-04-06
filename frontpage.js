@@ -159,3 +159,8 @@ function reco(){
 function carte(){
   document.querySelector(".map").classList.toggle("info_visible");
 }
+
+function close_info(e){
+  console.log(e.target);
+  e.target.parentNode.classList.toggle("info_visible");
+}
