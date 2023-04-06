@@ -813,17 +813,21 @@ article {
   max-width: 400px;
   width: 90%;
   height: 50%;
-  background-color: rgb(207, 231, 255);
-  border-radius: 20px;
+  position: relative;
+  background-color: #5f72a63e;
+  border-radius: 10px;
+  padding: 10px;
 }
 .pass h2 {
-  color: #30405f;
+  color: rgb(233, 235, 240);
+
   text-align: center;
 }
 
 .pass ul {
   list-style-type: none;
-  color: #1c2333;
+  color: rgb(195, 204, 232);
+
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -839,6 +843,7 @@ text-align: center;
 }
 
 .choice_date_cont{
+  margin: 10px;
   width: 100px;
   height: 30px;
   display: flex;
@@ -866,4 +871,16 @@ text-align: center;
 .date_deux{
   transform: translate(70px);
   transition: 1s;
+}
+.achat_billet{
+  margin: 10px;
+  border-radius: 29999999px;
+  background-color: #264a92;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
 }
