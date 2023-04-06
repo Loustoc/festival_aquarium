@@ -25,7 +25,7 @@ window.addEventListener("touchmove", (e) => {
   if (scrolling == 0) {
     offset_y = y_start - e.touches[0].pageY;
     console.log(offset_y);
-    // if (Math.abs(offset_y)>10){
+    if (Math.abs(offset_y)>10){
     if (offset_y < 0 && current_state != 0) {
       current_state--;
       if (current_state == 0) {
@@ -51,7 +51,7 @@ window.addEventListener("touchmove", (e) => {
           .classList.toggle("main_scroll" + current_state - 1);
       }
     }
-    // }
+    }
     scrolling = 1;
     console.log(e.deltaY);
     setTimeout(function () {
