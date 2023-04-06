@@ -756,16 +756,20 @@ article {
   transition: 1s;
   height:100px;
   background-color: #30405f;
-  transform: translateX(-85vw);
+  transform: translate(-85vw,120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .info_visible{
-  transform: translateX(0);
+  transform: translate(0px,120px);
   transition: 1s;
 }
 
 .img_reco{
-  width: 70vw;
+  height: 60vh;
+  max-height: calc(100vh - 20px);
 }
 
 .info{
