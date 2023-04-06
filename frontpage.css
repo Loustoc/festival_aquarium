@@ -843,16 +843,27 @@ text-align: center;
   height: 30px;
   display: flex;
   justify-content: space-between;
-  background-color:#30405f;
+  background-color:#264a92;
   border-radius: 30000000px;
 }
 .choice_date{
   height: 30px;
   width: 30px;
   display: flex;
+  color: wheat;
   align-items: center;
   justify-content: center;
-  background-color: aliceblue;
   border-radius: 50%;
-  color: #1c2333;
+}
+.chosen_date{
+  transition: 1s;
+  height: 30px;
+  border-radius: 50%;
+  width: 30px;
+  background-color:#b8dcff9b;
+  position: absolute;
+}
+.date_deux{
+  transform: translate(70px);
+  transition: 1s;
 }

@@ -163,3 +163,12 @@ function close_info(e) {
   console.log(e.target);
   e.target.parentNode.classList.toggle("info_visible");
 }
+
+function choixdate(e){
+  if(e.target.innerHTML==17){
+    document.querySelector(".chosen_date").classList.remove("date_deux")
+  }
+  else{
+    document.querySelector(".chosen_date").classList.add("date_deux");
+  }
+}
