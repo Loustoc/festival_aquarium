@@ -133,9 +133,16 @@ document
       document.querySelector("#about_curve").classList.toggle("menu_active");
       document.querySelector("#l").classList.toggle("menu_active");
       document.querySelector("#b").classList.toggle("menu_active");
+      document.querySelector("#bou").classList.toggle("menu_active");
+      document.querySelector("#p").classList.toggle("menu_active");
+
       setTimeout(function () {
-        $(b).arctext({ radius: 80, dir: -1 });
+        $(b).arctext({ radius: 60, dir: -1 });
+        $(bou).arctext({ radius: 100, dir: -1 });
+
         $(about_curve).arctext({ radius: 200, dir: -1 });
+        $(p).arctext({ radius: 80, dir: -1 });
+
         $(l).arctext({ radius: 100, dir: -1 });
       }, 800);
       if (
@@ -147,6 +154,9 @@ document
           .querySelector("#about_curve")
           .classList.toggle("menu_active_visible");
         document.querySelector("#l").classList.toggle("menu_active_visible");
+        document.querySelector("#bou").classList.toggle("menu_active_visible");
+        document.querySelector("#p").classList.toggle("menu_active_visible");
+
         document.querySelector("#b").classList.toggle("menu_active_visible");
       } else if (
         init == 0 &&
@@ -159,6 +169,9 @@ document
             .querySelector("#about_curve")
             .classList.toggle("menu_active_visible");
           document.querySelector("#l").classList.toggle("menu_active_visible");
+          document.querySelector("#bou").classList.toggle("menu_active_visible");
+          document.querySelector("#p").classList.toggle("menu_active_visible");
+
           document.querySelector("#b").classList.toggle("menu_active_visible");
         }, 300);
       } else {
@@ -167,6 +180,8 @@ document
             .querySelector("#about_curve")
             .classList.toggle("menu_active_visible");
           document.querySelector("#l").classList.toggle("menu_active_visible");
+          document.querySelector("#bou").classList.toggle("menu_active_visible");
+          document.querySelector("#p").classList.toggle("menu_active_visible");
           document.querySelector("#b").classList.toggle("menu_active_visible");
         }, 900);
       }

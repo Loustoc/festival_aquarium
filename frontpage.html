@@ -36,7 +36,7 @@
             <script src="yeux_mouse_follow.js"></script>
     
     <ul class="nav_desktop">
-        <li class="about" onclick="vague_apropos()">A PROPOS
+        <li class="about">A PROPOS
         </li>
         <li>
             BILLETTERIE
@@ -46,16 +46,33 @@
         </li>
     </ul>
     <ul class="nav_mobile">
-        <div class="circles_container">
+
+     <div class="circles_container">
+
         <div  style="transform: translateY(10px)" class="circle_nav about_circle">
             
             <div style="transform: translateY(10px);" class="circle_nav lineup_circle">
                
-                <div class="circle_nav billetterie_circle">
+                <div style="transform: translateY(-25px);" class="circle_nav boutique_circle">
+                  
+                  <div class="circle_nav programme_circle">
+                    
+                    <div class="circle_nav billetterie_circle"></div>
+                    
                     <li onclick="billetterie()" id="b">BILLETTERIE</li>
-                </div>
-            </div><li style="transform: translateY(-25px);" id="l" onclick="lineup()">LINE-UP</li></div>
-            <li style="transform: translateY(-25px);" id="about_curve"  class="about" onclick="apropos()">A PROPOS</li></div>
+                    <li style="transform: translateY(30px);" onclick="boutique()" id="p">PROGRAMME</li>
+                  </div>
+                  <li style="transform: translateY(35px);" onclick="boutique()" id="bou">BOUTIQUE</li>
+
+            </div>
+
+            <li style="transform: translateY(15px);" id="l" onclick="lineup()">LINE-UP</li>
+
+        </div>
+
+            <li style="transform: translateY(30px);" id="about_curve"  class="about" onclick="apropos()">A PROPOS</li>
+          
+      </div>
         
 <!--        
         <li class="about" onclick="vague_apropos()">A PROPOS

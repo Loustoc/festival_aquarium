@@ -218,49 +218,36 @@ window.addEventListener("click", (e) => {
   }
 });
 
-const pastilles = document.querySelectorAll(".choix_conso_pastille")
+const pastilles = document.querySelectorAll(".choix_conso_pastille");
 
-const prix_slide = document.querySelectorAll(".subcont")
+const prix_slide = document.querySelectorAll(".subcont");
 
 function troisconsos(e) {
-  if (e.target.parentNode.parentNode==liste_pass[0]){
-
-  pastilles[0].style.transform = `translate(calc(${
-    document.querySelector(".choix_conso").getBoundingClientRect().width
-  }px - 63px),-3px`;
-  pastilles[0].style.width = `
+  if (e.target.parentNode.parentNode == liste_pass[0]) {
+    pastilles[0].style.transform = `translate(calc(${
+      document.querySelector(".choix_conso").getBoundingClientRect().width
+    }px - 63px),-3px`;
+    pastilles[0].style.width = `
 68px`;
-prix_slide[0].style.transform = `translate(-50%)`;
-
-}
-else {
-
-  pastilles[1].style.transform = `translate(calc(${
-    document.querySelector(".choix_conso").getBoundingClientRect().width
-  }px - 63px),-3px`;
-  pastilles[1].style.width = `
+    prix_slide[0].style.transform = `translate(-50%)`;
+  } else {
+    pastilles[1].style.transform = `translate(calc(${
+      document.querySelector(".choix_conso").getBoundingClientRect().width
+    }px - 63px),-3px`;
+    pastilles[1].style.width = `
 68px`;
-prix_slide[1].style.transform = `translate(-50%)`;
-
-
-}
+    prix_slide[1].style.transform = `translate(-50%)`;
   }
-
+}
 
 function pasconsos(e) {
-  if (e.target.parentNode.parentNode==liste_pass[0]){
-
+  if (e.target.parentNode.parentNode == liste_pass[0]) {
     pastilles[0].style.transform = `translate(-10px,-3px)`;
     pastilles[0].style.width = `100px`;
     prix_slide[0].style.transform = `translate(50%)`;
-   
-}
-  else {
-  
+  } else {
     pastilles[1].style.transform = `translate(-10px,-3px)`;
     pastilles[1].style.width = `100px`;
     prix_slide[1].style.transform = `translate(50%)`;
-  
   }
 }
-

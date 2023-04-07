@@ -148,8 +148,8 @@ nav ul li {
     animation-delay: 0.5s;
     animation-fill-mode: forwards; */
   transition: 0.5s;
-  width: 460px !important;
-  height: 460px !important;
+  width: 600px !important;
+  height: 600px !important;
 }
 
 .billetterie_circle {
@@ -769,19 +769,17 @@ article {
   align-items: center;
   /* overflow: scroll; */
 }
-.content_engag{
+.content_engag {
   height: 50vh;
   width: 90%;
   overflow: scroll;
   padding-left: 30px;
-
 }
-.content_about{
+.content_about {
   height: fit-content;
   width: 90%;
   overflow: scroll;
   padding-left: 30px;
-
 }
 .info_visible {
   transform: translate(0px, calc((100vh - 100px) / 2 - 50%));
@@ -854,24 +852,24 @@ article {
   justify-content: center;
 }
 
-.pass ul li{
-text-align: center;
+.pass ul li {
+  text-align: center;
 }
-.info_bubble img{
+.info_bubble img {
   position: relative;
   z-index: 9999;
 }
 
-.choice_date_cont{
+.choice_date_cont {
   margin: 10px;
   width: 100px;
   height: 30px;
   display: flex;
   justify-content: space-between;
-  background-color:#264a926a;
+  background-color: #264a926a;
   border-radius: 30000000px;
 }
-.choice_date{
+.choice_date {
   height: 30px;
   width: 30px;
   display: flex;
@@ -880,19 +878,19 @@ text-align: center;
   justify-content: center;
   border-radius: 50%;
 }
-.chosen_date{
+.chosen_date {
   transition: 1s;
   height: 30px;
   border-radius: 50%;
   width: 30px;
-  background-color:#b8dcff58;
+  background-color: #b8dcff58;
   position: absolute;
 }
-.date_deux{
+.date_deux {
   transform: translate(70px);
   transition: 1s;
 }
-.achat_billet{
+.achat_billet {
   margin: 10px;
   border-radius: 10px;
   background-color: #264a9291;
@@ -906,29 +904,28 @@ text-align: center;
   transition: 1s;
 }
 
-.close_bubble{
+.close_bubble {
   margin-top: 10px;
   width: 30px;
   height: 30px;
 }
 
-.selected_pass{
+.selected_pass {
   height: 300px;
   transition: 1s;
-
 }
 
-.deselected_pass{
+.deselected_pass {
   height: 40px;
   transition: 1s;
 }
 
-.achat_invisible{
-opacity: 0;
-transition:1s;
+.achat_invisible {
+  opacity: 0;
+  transition: 1s;
 }
 
-.choix_conso{
+.choix_conso {
   position: relative;
 
   display: flex;
@@ -936,25 +933,23 @@ transition:1s;
   margin: 10px;
 }
 
-.choix_conso_pastille{
+.choix_conso_pastille {
   width: 100px;
   height: 25px;
   transition: 1s;
   position: absolute;
   padding: 3px;
-  transform: translate(-10px,-3px);
-  background-color:#b8dcff58;
+  transform: translate(-10px, -3px);
+  background-color: #b8dcff58;
   border-radius: 20px;
 }
 
-
-.prix{
+.prix {
   width: 100px;
   /* background-color: red; */
   overflow: hidden;
- 
 }
-.prix_subcont{
+.prix_subcont {
   text-align: center;
   width: 100px;
   flex-shrink: 0 !important;
@@ -962,7 +957,7 @@ transition:1s;
   font-size: 2em;
 }
 
-.subcont{
+.subcont {
   display: flex;
   justify-content: center;
   align-items: center;
