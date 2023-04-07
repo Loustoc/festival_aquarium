@@ -220,6 +220,8 @@ window.addEventListener("click", (e) => {
 
 const pastilles = document.querySelectorAll(".choix_conso_pastille")
 
+const prix_slide = document.querySelectorAll(".subcont")
+
 function troisconsos(e) {
   if (e.target.parentNode.parentNode==liste_pass[0]){
 
@@ -228,7 +230,7 @@ function troisconsos(e) {
   }px - 63px),-3px`;
   pastilles[0].style.width = `
 68px`;
-document.querySelector(".subcont").style.transform = `translate(-50%)`;
+prix_slide[0].style.transform = `translate(-50%)`;
 
 }
 else {
@@ -238,6 +240,7 @@ else {
   }px - 63px),-3px`;
   pastilles[1].style.width = `
 68px`;
+prix_slide[1].style.transform = `translate(-50%)`;
 
 
 }
@@ -249,12 +252,14 @@ function pasconsos(e) {
 
     pastilles[0].style.transform = `translate(-10px,-3px)`;
     pastilles[0].style.width = `100px`;
-    document.querySelector(".subcont").style.transform = `translate(50%)`;
+    prix_slide[0].style.transform = `translate(50%)`;
+   
 }
   else {
   
     pastilles[1].style.transform = `translate(-10px,-3px)`;
-    pastilles[1].style.width =æ `100px`;
+    pastilles[1].style.width = `100px`;
+    prix_slide[1].style.transform = `translate(50%)`;
   
   }
 }
