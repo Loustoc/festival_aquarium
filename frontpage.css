@@ -753,21 +753,22 @@ article {
   flex-direction: column;
 }
 .info_bubble {
+  top: 50%;
   position: fixed;
   flex-direction: column;
   width: 70vw;
   transition: 1s;
   z-index: 9999999;
   height: 100px;
+  transform: translate(-140vw, calc((100vh - 100px) / 2 - 50%));
   background-color: #30405f;
-  transform: translate(-140vw, 120px);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .info_visible {
-  transform: translate(0px, 120px);
+  transform: translate(0px, calc((100vh - 100px) / 2 - 50%));
   transition: 1s;
   z-index: 9999999;
 }
