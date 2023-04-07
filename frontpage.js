@@ -64,6 +64,8 @@ window.addEventListener("touchmove", (e) => {
 });
 
 addEventListener("wheel", (e) => {
+  if(!e.target.parentNode.parentNode.parentNode.classList.contains("info_bubble")){
+
   // console.log(e.deltaY);
   offset_scroll = e.deltaY;
   if (scrolling == 0) {
@@ -102,6 +104,7 @@ addEventListener("wheel", (e) => {
       scrolling = 0;
     }, 1300);
   }
+}
 });
 
 // window.addEventListener("click", function (e) {
