@@ -185,7 +185,7 @@ const liste_pass = document.querySelectorAll(".pass");
 
 window.addEventListener("click", (e)=>
 {
-  if(e.target == liste_pass[0] || e.target.parentNode== liste_pass[0]){
+  if(e.target == liste_pass[0] || e.target.parentNode== liste_pass[0] || e.target.parentNode.parentNode== liste_pass[0]){
     document.querySelector(".achat1").classList.remove("achat_invisible");
 
     liste_pass[0].classList.remove("deselected_pass");
@@ -196,7 +196,7 @@ window.addEventListener("click", (e)=>
 
     
   }
-  else if(e.target == liste_pass[1] || e.target.parentNode== liste_pass[1]){
+  else if(e.target == liste_pass[1] || e.target.parentNode== liste_pass[1]|| e.target.parentNode.parentNode== liste_pass[1]|| e.target.parentNode.parentNode.parentNode== liste_pass[1]){
     document.querySelector(".achat2").classList.remove("achat_invisible");
 
     liste_pass[1].classList.remove("deselected_pass");
