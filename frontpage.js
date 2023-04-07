@@ -158,7 +158,8 @@ function about_fest() {
 }
 
 function reco() {
-  document.querySelector(".reco").classList.toggle("info_visible");
+  // document.querySelector(".reco").classList.toggle("info_visible");
+  window.open("./precautions_et_recommandations.pdf", "_blank")
 }
 
 function carte() {
@@ -179,3 +180,30 @@ function choixdate(e){
     document.querySelector(".chosen_date").classList.add("date_deux");
   }
 }
+
+const liste_pass = document.querySelectorAll(".pass");
+
+window.addEventListener("click", (e)=>
+{
+  if(e.target == liste_pass[0] || e.target.parentNode== liste_pass[0]){
+    document.querySelector(".achat1").classList.remove("achat_invisible");
+
+    liste_pass[0].classList.remove("deselected_pass");
+    liste_pass[0].classList.add("selected_pass");
+    liste_pass[1].classList.add("deselected_pass");
+    liste_pass[1].classList.remove("selected_pass");
+    document.querySelector(".achat2").classList.add("achat_invisible");
+
+    
+  }
+  else if(e.target == liste_pass[1] || e.target.parentNode== liste_pass[1]){
+    document.querySelector(".achat2").classList.remove("achat_invisible");
+
+    liste_pass[1].classList.remove("deselected_pass");
+    liste_pass[1].classList.add("selected_pass");
+    liste_pass[0].classList.add("deselected_pass");
+    liste_pass[0].classList.remove("selected_pass");
+    document.querySelector(".achat1").classList.add("achat_invisible");
+
+  }
+})

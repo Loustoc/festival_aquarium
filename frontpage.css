@@ -823,9 +823,11 @@ article {
 }
 
 .pass {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 1s;
   max-width: 400px;
   width: 90%;
   height: 50%;
@@ -836,7 +838,8 @@ article {
 }
 .pass h2 {
   color: rgb(233, 235, 240);
-
+  position: relative;
+  z-index: -1;
   text-align: center;
 }
 
@@ -899,6 +902,7 @@ text-align: center;
   align-items: center;
   position: absolute;
   bottom: 0;
+  transition: 1s;
 }
 
 .close_bubble{
@@ -906,3 +910,20 @@ text-align: center;
   width: 30px;
   height: 30px;
 }
+
+.selected_pass{
+  height: 300px;
+  transition: 1s;
+
+}
+
+.deselected_pass{
+  height: 40px;
+  transition: 1s;
+}
+
+.achat_invisible{
+opacity: 0;
+transition:1s;
+}
+
