@@ -227,7 +227,10 @@ function troisconsos(e) {
     document.querySelector(".choix_conso").getBoundingClientRect().width
   }px - 63px),-3px`;
   pastilles[0].style.width = `
-68px`;}
+68px`;
+document.querySelector(".subcont").style.transform = `translate(-50%)`;
+
+}
 else {
 
   pastilles[1].style.transform = `translate(calc(${
@@ -235,6 +238,7 @@ else {
   }px - 63px),-3px`;
   pastilles[1].style.width = `
 68px`;
+
 
 }
   }
@@ -244,12 +248,13 @@ function pasconsos(e) {
   if (e.target.parentNode.parentNode==liste_pass[0]){
 
     pastilles[0].style.transform = `translate(-10px,-3px)`;
-    pastille[0].style.width = `100px`;
+    pastilles[0].style.width = `100px`;
+    document.querySelector(".subcont").style.transform = `translate(50%)`;
 }
   else {
   
     pastilles[1].style.transform = `translate(-10px,-3px)`;
-    pastilles[1].style.width = `100px`;
+    pastilles[1].style.width =æ `100px`;
   
   }
 }

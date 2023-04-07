@@ -948,3 +948,22 @@ transition:1s;
 }
 
 
+.prix{
+  width: 100px;
+  /* background-color: red; */
+  overflow: hidden;
+ 
+}
+.prix_subcont{
+  text-align: center;
+  width: 100px;
+  flex-shrink: 0 !important;
+  flex-grow: 0;
+}
+
+.subcont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(50%);
+}
