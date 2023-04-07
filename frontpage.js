@@ -218,21 +218,39 @@ window.addEventListener("click", (e) => {
   }
 });
 
-function troisconsos() {
-  document.querySelector(
-    ".choix_conso_pastille"
-  ).style.transform = `translate(calc(${
+const pastilles = document.querySelectorAll(".choix_conso_pastille")
+
+function troisconsos(e) {
+  if (e.target.parentNode.parentNode==liste_pass[0]){
+
+  pastilles[0].style.transform = `translate(calc(${
     document.querySelector(".choix_conso").getBoundingClientRect().width
   }px - 63px),-3px`;
-  document.querySelector(".choix_conso_pastille").style.width = `
+  pastilles[0].style.width = `
+68px`;}
+else {
+
+  pastilles[1].style.transform = `translate(calc(${
+    document.querySelector(".choix_conso").getBoundingClientRect().width
+  }px - 63px),-3px`;
+  pastilles[1].style.width = `
 68px`;
+
+}
+  }
+
+
+function pasconsos(e) {
+  if (e.target.parentNode.parentNode==liste_pass[0]){
+
+    pastilles[0].style.transform = `translate(-10px,-3px)`;
+    pastille[0].style.width = `100px`;
+}
+  else {
+  
+    pastilles[1].style.transform = `translate(-10px,-3px)`;
+    pastilles[1].style.width = `100px`;
+  
+  }
 }
 
-function pasconsos() {
-
-  document.querySelector(
-    ".choix_conso_pastille"
-  ).style.transform = `translate(-10px,-3px)`;
-  document.querySelector(".choix_conso_pastille").style.width = `
-100px`;
-}

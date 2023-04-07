@@ -758,6 +758,7 @@ article {
   flex-direction: column;
   width: 70vw;
   padding-top: 20px;
+  border-radius: 20px;
   height: fit-content;
   transition: 1s;
   z-index: 9999999;
