@@ -161,7 +161,7 @@ function carte() {
 
 function close_info(e) {
   console.log(e.target);
-  e.target.parentNode.classList.toggle("info_visible");
+  e.target.parentNode.parentNode.classList.toggle("info_visible");
 }
 
 function choixdate(e){
