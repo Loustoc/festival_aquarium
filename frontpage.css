@@ -943,8 +943,8 @@ transition:1s;
   position: absolute;
   padding: 3px;
   transform: translate(-10px,-3px);
+  background-color:#b8dcff58;
   border-radius: 20px;
-  background-color: rgba(115, 171, 175, 0.47);
 }
 
 
