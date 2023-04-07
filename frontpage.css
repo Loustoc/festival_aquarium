@@ -757,16 +757,30 @@ article {
   position: fixed;
   flex-direction: column;
   width: 70vw;
+  height: 60vh;
   transition: 1s;
   z-index: 9999999;
-  height: 100px;
   transform: translate(-140vw, calc((100vh - 100px) / 2 - 50%));
   background-color: #30405f;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* overflow: scroll; */
 }
+.content_engag{
+  height: 50vh;
+  width: 90%;
+  overflow: scroll;
+  padding-left: 30px;
 
+}
+.content_about{
+  height: 50vh;
+  width: 90%;
+  overflow: scroll;
+  padding-left: 30px;
+
+}
 .info_visible {
   transform: translate(0px, calc((100vh - 100px) / 2 - 50%));
   transition: 1s;
@@ -887,6 +901,7 @@ text-align: center;
 }
 
 .close_bubble{
+  margin-top: 10px;
   width: 30px;
   height: 30px;
 }

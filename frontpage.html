@@ -389,13 +389,21 @@
 <article class="infos">
   <!-- <img src="img/carte_festival_fullVec.svg" alt=""> -->
   <div class="container_infos">
-  <div onclick="engagement()" class="info"> notre engagement</div>
-  <div onclick="funds()" class="info">nos fonds</div>
-  <div onclick="reco()"  class="info">nos recommandations</div>
+    <div onclick="about_fest()" class="info">à propos</div>
+    <div onclick="engagement()" class="info"> notre engagement</div>
+    <div onclick="reco()"  class="info">nos recommandations</div>
   <div onclick="carte()"  class="info">la carte des lieux</div>
   </div>
-  
+   <div class="info_bubble about_fest">
+    <div class="content_about">
+      L’aquarium festival est un festival à vocation écologique, sur le thème de l’océan, Il aura lieu sur le WE du 17/18 avril 2023 à Bray Dunes et à pour vocation de sensibiliser notre cible : les 16/30 ans à la cause environnementale et plus précisément à l'écosystème marin.
+    </div> 
+    <div class="close_bubble" onclick="close_info(event)">
+
+        <img src="img/close.svg" alt=""></div>
+    </div>
     <div class="info_bubble engag">
+      <div class="content_engag">
       <ul>
         <li>Fournir des informations sur les problèmes environnementaux et les solutions possibles, par la création de conférences</li>
         <li>Utiliser des matières biodégradables pour les éléments du festival, comme les affiches, les flyers ou les sacs.</li>
@@ -410,13 +418,12 @@
         <li>
           Donner 30% des bénéfices à nos associations partenaires.</li>
         </ul>
+      </div>
       <div class="close_bubble" onclick="close_info(event)">
         <img src="img/close.svg" alt="">
         </div>
     </div>
-    <div class="info_bubble funds">
-      <div class="close_bubble" onclick="close_info(event)"><img src="img/close.svg" alt=""></div>
-    </div>
+   
     <div class="info_bubble reco">
       <img class="img_reco" src="img/dans_mon_sac.png" alt="">
       <div class="close_bubble" onclick="close_info(event)"><img src="img/close.svg" alt=""></div>

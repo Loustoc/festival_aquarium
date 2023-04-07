@@ -22,6 +22,8 @@ window.addEventListener("touchstart", (e) => {
 });
 
 window.addEventListener("touchmove", (e) => {
+  if(!e.target.parentNode.parentNode.parentNode.classList.contains("info_bubble")){
+    console.log(e.target);
   if (scrolling == 0) {
     offset_y = y_start - e.touches[0].pageY;
     console.log(offset_y);
@@ -58,6 +60,7 @@ window.addEventListener("touchmove", (e) => {
       scrolling = 0;
     }, 1300);
   }
+}
 });
 
 addEventListener("wheel", (e) => {
@@ -147,8 +150,8 @@ function engagement() {
   document.querySelector(".engag").classList.toggle("info_visible");
 }
 
-function funds() {
-  document.querySelector(".funds").classList.toggle("info_visible");
+function about_fest() {
+  document.querySelector(".about_fest").classList.toggle("info_visible");
 }
 
 function reco() {
