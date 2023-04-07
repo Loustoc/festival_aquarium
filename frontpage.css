@@ -927,3 +927,23 @@ opacity: 0;
 transition:1s;
 }
 
+.choix_conso{
+  position: relative;
+
+  display: flex;
+  gap: 30px;
+  margin: 20px;
+}
+
+.choix_conso_pastille{
+  width: 100px;
+  height: 25px;
+  transition: 1s;
+  position: absolute;
+  padding: 3px;
+  transform: translate(-10px,-3px);
+  border-radius: 20px;
+  background-color: rgba(115, 171, 175, 0.47);
+}
+
+
