@@ -162,7 +162,8 @@ function reco() {
 }
 
 function carte() {
-  document.querySelector(".map").classList.toggle("info_visible");
+  // document.querySelector(".map").classList.toggle("info_visible");
+  window.open("./carte_festival.pdf", "_blank")
 }
 
 function close_info(e) {
