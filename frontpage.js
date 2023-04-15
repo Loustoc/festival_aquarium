@@ -1,16 +1,8 @@
-// document.querySelector(".start_article").style.transform = `translateY(-${window.innerHeight - document.querySelector(".start_article").getBoundingClientRect().top - 90 }px`;
-
-// document.querySelector(".start_article").style.transform = `translateY(-${document.querySelector(".start_article").getBoundingClientRect().top}px`;
 
 document.querySelector("main").style.transform = `translateY(-${
   document.querySelector("main").getBoundingClientRect().top
 }px`;
-
-// document.querySelector(".last_wave").style.transform = `translateY(
-// ${window.innerHeight - document.querySelector(".last_wave").getBoundingClientRect().bottom})+px`;
-// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 var scrolling = 0;
@@ -114,18 +106,6 @@ addEventListener("wheel", (e) => {
   }
 });
 
-// window.addEventListener("click", function (e) {
-//   if (e.target.classList.contains("about")) {
-//       current_state=2;
-//       for (let i = 0; i < 3; i++) {
-//         document.querySelector("main").classList.remove("main_scroll" + i);
-//       }
-//       document
-//       .querySelector("main")
-//       .classList.toggle("main_scroll" + current_state);
-//   }
-
-// });
 function apropos() {
   current_state = 2;
   for (let i = 0; i < 4; i++) {

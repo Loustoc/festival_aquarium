@@ -19,7 +19,7 @@ html {
 }
 
 nav {
-  z-index: 999999999999999;
+  z-index: 999999;
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -78,7 +78,7 @@ nav ul li {
 }
 
 .flou_active {
-  z-index: 999999999;
+  z-index: 999;
 
   opacity: 1;
   transition: 1s;
