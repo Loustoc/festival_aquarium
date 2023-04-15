@@ -653,6 +653,7 @@ article {
   height: calc(var(--vh, 1vh) * 100);
   transition: 1s;
   display: flex;
+  flex-direction: column;
   padding-top: 200px;
 }
 .start_article {
@@ -749,7 +750,6 @@ article {
   transform: translateY(calc(var(--vh, 1vh) * -1 * 400)) !important;
   transition: 1s;
 }
-
 
 .infos {
   padding-top: 200px;
@@ -977,4 +977,23 @@ article {
   justify-content: center;
   align-items: center;
   transform: translate(50%);
+}
+
+.choix_jour_programme {
+  display: flex;
+  width: 100vw;
+}
+
+.container_jours {
+  display: flex;
+  gap: 20px;
+}
+
+.container_jour {
+  flex-shrink: 0;
+  width: 100vw;
+}
+.jour_prog{
+  width: 50vw;
+  text-align: center;
 }

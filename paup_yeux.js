@@ -76,7 +76,7 @@ document.addEventListener("mousemove", (event) => {
   mouseposx = event.pageX;
   mouseposy = event.pageY;
   // console.log(mouseposx);
-  console.log(mouseposy);
+  // console.log(mouseposy);
 
   lookat();
 });
@@ -90,7 +90,7 @@ function lookat() {
     a = document.getElementById("logo_enter");
   }
 
-  console.log(a);
+  // console.log(a);
   var svgDoc = a.contentDocument;
   var eyed = svgDoc.getElementById("eyed");
   var eyeg = svgDoc.getElementById("eyeg");
@@ -114,11 +114,11 @@ function lookat() {
   var axisy = mouseposy - blany;
   var axisxdroite = mouseposx - blandx;
   var axisxgauche = mouseposx - blangx;
-  if (mouseposy <= blany) {
-    console.log("dessus");
-  } else if (mouseposy >= blany) {
-    console.log("dessous");
-  }
+  // if (mouseposy <= blany) {
+  //   console.log("dessus");
+  // } else if (mouseposy >= blany) {
+  //   console.log("dessous");
+  // }
   var variationd = Math.sqrt(100 / (axisxdroite * axisxdroite + axisy * axisy));
   var variationdx = variationd * axisxdroite;
   var variationdy = variationd * axisy;
