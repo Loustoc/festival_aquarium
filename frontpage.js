@@ -1,4 +1,3 @@
-
 document.querySelector("main").style.transform = `translateY(-${
   document.querySelector("main").getBoundingClientRect().top
 }px`;

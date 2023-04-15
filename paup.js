@@ -1,65 +1,57 @@
 var a;
 var paup_cont = document.getElementById("logo");
-
 var mouseposx;
 var mouseposy;
 var eyeg;
 var eyed;
 var sizelogo = 20;
-
+let facteur = 1;
 //COMMENCE PAR LES YEUX OUVERTS
 
 var paup;
 var pos = 0;
 paup_cont.addEventListener("load", function () {
-  setTimeout(function () {ouvrepaup()},3000)
-  
+  setTimeout(function () {
+    ouvrepaup();
+  }, 3000);
 });
 
 //OUVERTURE INITIALE DES PAUPIERES
 
-function ouvrepaup(){
+function ouvrepaup() {
   var svgDoc = paup_cont.contentDocument;
   paup = svgDoc.getElementById("paupieres");
-  paupmove = setInterval(cligne,3000);
+  paupmove = setInterval(cligne, 3000);
 }
-
 
 //FIN OUVERTURE INITIALE DES PAUPIERES
 
 //CLIGNEMENT DES PAUPIERES TOUTES LES 3 SEC
-function cligne(){
-  paupfermecligne = setInterval(fermecligne,5);
-  
+function cligne() {
+  paupfermecligne = setInterval(fermecligne, 5);
 }
 
-
-function fermecligne(){
-  if (pos<=80){
-    pos+=1;
+function fermecligne() {
+  if (pos <= 80) {
+    pos += 1;
     paup.style.transform = `translateY(${pos}px)`;
-  }
-  else{
+  } else {
     clearTimeout(paupfermecligne);
-    paupouvrecligne = setInterval(ouvrecligne,5);
+    paupouvrecligne = setInterval(ouvrecligne, 5);
   }
 }
 
-function ouvrecligne(){
-  if (pos>=0){
-    pos-=1;
+function ouvrecligne() {
+  if (pos >= 0) {
+    pos -= 1;
     paup.style.transform = `translateY(${pos}px)`;
-  }
-  else{
+  } else {
     clearTimeout(paupouvrecligne);
   }
 }
 //FIN CLIGNEMENT DES PAUPIERES TOUTES LES 3 SEC
 
-
-
 document.addEventListener("mousemove", (event) => {
- 
   var eventDoc, doc, body;
 
   event = event || window.event; // IE-ism
@@ -84,43 +76,49 @@ document.addEventListener("mousemove", (event) => {
   mouseposx = event.pageX;
   mouseposy = event.pageY;
   // console.log(mouseposx);
-  // console.log(mouseposy);
+  console.log(mouseposy);
 
   lookat();
 });
 
 function lookat() {
-  if (home_page){
+  
+  if (home_page) {
     a = paup_cont;
-  }
-  else{
+    facteur = 0;
+  } else {
     a = document.getElementById("logo_enter");
   }
+
   console.log(a);
   var svgDoc = a.contentDocument;
   var eyed = svgDoc.getElementById("eyed");
   var eyeg = svgDoc.getElementById("eyeg");
   var blangx =
     svgDoc.getElementById("blancg").getBoundingClientRect().x +
-    svgDoc.getElementById("blancg").getBoundingClientRect().width / 2 + (window.innerWidth)/2 - (sizelogo/100*window.innerWidth)/2;
-    var blany =
-    svgDoc.getElementById("blancg").getBoundingClientRect().y +
-    svgDoc.getElementById("blancg").getBoundingClientRect().height /
-      2;
+    svgDoc.getElementById("blancg").getBoundingClientRect().width / 2 +
+    window.innerWidth / 2 -
+    ((sizelogo / 100) * window.innerWidth) / 2;
+  var blany =
+    svgDoc.getElementById("blancg").getBoundingClientRect().y -
+    svgDoc.getElementById("blancg").getBoundingClientRect().height / 2 +
+    facteur * (window.innerHeight / 2 - sizelogo / 2);
+
   var blandx =
     svgDoc.getElementById("blancd").getBoundingClientRect().x +
-    svgDoc.getElementById("blancd").getBoundingClientRect().width / 2+ (window.innerWidth)/2 - (sizelogo/100*window.innerWidth)/2;
-    // console.log(blangx);
+    svgDoc.getElementById("blancd").getBoundingClientRect().width / 2 +
+    window.innerWidth / 2 -
+    ((sizelogo / 100) * window.innerWidth) / 2;
+  // console.log(blangx);
 
   var axisy = mouseposy - blany;
   var axisxdroite = mouseposx - blandx;
   var axisxgauche = mouseposx - blangx;
-  // if (mouseposx <= blangx){
-  //   console.log("gauche")
-  // }
-  // else if (mouseposx >= blangx){
-  //   console.log("droite");
-  // }
+  if (mouseposy <= blany) {
+    console.log("dessus");
+  } else if (mouseposy >= blany) {
+    console.log("dessous");
+  }
   var variationd = Math.sqrt(100 / (axisxdroite * axisxdroite + axisy * axisy));
   var variationdx = variationd * axisxdroite;
   var variationdy = variationd * axisy;

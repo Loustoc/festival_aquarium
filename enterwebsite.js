@@ -1,5 +1,5 @@
 const cache_home = document.querySelector(".cache_home");
-var home_page =false;
+var home_page = false;
 setTimeout(function () {
   document.querySelector("#festival_typo").classList.remove("invisible");
   document.querySelector(".logo_enter_container").classList.remove("invisible");
@@ -24,6 +24,5 @@ function open_website() {
         document.querySelector(".cache_home").remove();
       }, 1000);
     }, 3000);
-    // setTimeout(function (){ window.open("./frontpage.html","_self")},4000)
   }, 1000);
 }
