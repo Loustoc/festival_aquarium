@@ -1,5 +1,5 @@
 const cache_home = document.querySelector(".cache_home");
-
+var home_page =false;
 setTimeout(function () {
   document.querySelector("#festival_typo").classList.remove("invisible");
   document.querySelector(".logo_enter_container").classList.remove("invisible");
@@ -14,6 +14,7 @@ function open_website() {
   setTimeout(function () {
     document.body.appendChild(anim);
     anim.play();
+    home_page = true;
     setTimeout(function () {
       anim.classList.add("fadeout_vid");
       cache_home.classList.add("invisible");
