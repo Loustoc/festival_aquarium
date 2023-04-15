@@ -24,13 +24,13 @@ window.addEventListener("touchmove", (e) => {
         if (offset_y < 0 && current_state != 0) {
           current_state--;
           if (current_state == 0) {
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 5; i++) {
               document
                 .querySelector("main")
                 .classList.remove("main_scroll" + i);
             }
           } else {
-            for (let i = 0; i < 4; i++) {
+            for (let i = 0; i < 5; i++) {
               document
                 .querySelector("main")
                 .classList.remove("main_scroll" + i);
@@ -40,7 +40,7 @@ window.addEventListener("touchmove", (e) => {
               .classList.toggle("main_scroll" + current_state);
           }
         } else {
-          if (current_state != 3) {
+          if (current_state != 4) {
             current_state++;
             document
               .querySelector("main")
@@ -73,11 +73,11 @@ addEventListener("wheel", (e) => {
       if (offset_scroll < 0 && current_state != 0) {
         current_state--;
         if (current_state == 0) {
-          for (let i = 0; i < 4; i++) {
+          for (let i = 0; i < 5; i++) {
             document.querySelector("main").classList.remove("main_scroll" + i);
           }
         } else {
-          for (let i = 0; i < 4; i++) {
+          for (let i = 0; i < 5; i++) {
             document.querySelector("main").classList.remove("main_scroll" + i);
           }
           document
@@ -85,7 +85,7 @@ addEventListener("wheel", (e) => {
             .classList.toggle("main_scroll" + current_state);
         }
       } else {
-        if (current_state != 3) {
+        if (current_state != 4) {
           current_state++;
           document
             .querySelector("main")
