@@ -10,7 +10,6 @@
   z-index: 99999999999999999999999;
   width: 40px;
   transform: translate(calc(50vw - 50%),10px);
-  
 }
 html {
   overflow: hidden;
@@ -1003,3 +1002,4 @@ article {
   width: 50vw;
   text-align: center;
 }
+

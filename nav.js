@@ -26,23 +26,44 @@ window.addEventListener("scroll", function (e) {
 });
 var navopen = 0;
 window.addEventListener("click", function (e) {
+  console.log(e.target);
+
   if (
-    document.querySelector(".circles_container").classList.contains("mobile_nav_active") && !(e.target.classList.contains("logo_container")) && !(e.currentTarget.classList.contains("burger_mobile"))
+    document.querySelector(".circles_container").classList.contains("mobile_nav_active") && !(e.target.classList.contains("logo_container"))&& !(e.target.classList.contains("burger_mobile"))
   ) {
-    console.log(e.target);
     console.log("coucou");
 
     toggle_menu();
   }
 });
 
+
 document
   .querySelector(".logo_container")
   .addEventListener("click", toggle_menu);
+  document
+  .querySelector(".burger_mobile")
+  .addEventListener("click", toggle_menu);
 
-document.querySelector(".burger_mobile").addEventListener("click", toggle_menu);
+function playAnimationBurger() {
+  console.log("test anim");
+  const svgatorObject = document.getElementById("animated-burger");
+  const svgatorDocument = svgatorObject.contentDocument;
+  const svgatorElement = svgatorDocument.getElementById('bottom');
+  const svgatorElement2 = svgatorDocument.getElementById('top');
+  const svgatorElement3 = svgatorDocument.getElementById('middle');
+
+  svgatorElement.classList.toggle("rotation_bottom");
+  svgatorElement2.classList.toggle("rotation_top");
+  svgatorElement3.classList.toggle("invisible");
+
+
+}
+
+
 
 function toggle_menu() {
+  playAnimationBurger();
   console.log("fonc lancée");
 
   if (window.innerWidth >= 429) {
