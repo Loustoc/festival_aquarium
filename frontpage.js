@@ -144,12 +144,12 @@ function about_fest() {
 }
 
 function reco() {
-  // document.querySelector(".reco").classList.toggle("info_visible");
+  document.querySelector(".reco").classList.toggle("info_visible");
   window.open("./precautions_et_recommandations.pdf", "_blank");
 }
 
 function carte() {
-  // document.querySelector(".map").classList.toggle("info_visible");
+  document.querySelector(".map").classList.toggle("info_visible");
   window.open("./carte_festival.pdf", "_blank");
 }
 

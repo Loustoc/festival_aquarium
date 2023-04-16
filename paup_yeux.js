@@ -1,10 +1,12 @@
 var a;
+var a_cont;
+
 var paup_cont = document.getElementById("logo");
 var mouseposx;
 var mouseposy;
 var eyeg;
 var eyed;
-var sizelogo = 20;
+
 let facteur = 1;
 //COMMENCE PAR LES YEUX OUVERTS
 
@@ -75,22 +77,28 @@ document.addEventListener("mousemove", (event) => {
   }
   mouseposx = event.pageX;
   mouseposy = event.pageY;
-  // console.log(mouseposx);
-  // console.log(mouseposy);
+  console.log(mouseposx);
+  console.log(mouseposy);
 
   lookat();
 });
 
 function lookat() {
-  
   if (home_page) {
     a = paup_cont;
+    a_cont = a;
+    var sizelogox = (a.getBoundingClientRect().width/window.innerWidth)*100;
+    var sizelogoy = (a.getBoundingClientRect().height/window.innerHeight)*100;
     facteur = 0;
   } else {
+    a_cont = document.querySelector(".container_enter").getBoundingClientRect().height;
+    var sizelogox = (a_cont/window.innerWidth)*100;
+    var sizelogoy = (a_cont/window.innerHeight)*100;
     a = document.getElementById("logo_enter");
   }
-
-  // console.log(a);
+  console.log(a);
+  console.log(a_cont);
+ 
   var svgDoc = a.contentDocument;
   var eyed = svgDoc.getElementById("eyed");
   var eyeg = svgDoc.getElementById("eyeg");
@@ -98,27 +106,33 @@ function lookat() {
     svgDoc.getElementById("blancg").getBoundingClientRect().x +
     svgDoc.getElementById("blancg").getBoundingClientRect().width / 2 +
     window.innerWidth / 2 -
-    ((sizelogo / 100) * window.innerWidth) / 2;
+    ((sizelogox / 100) * window.innerWidth) / 2;
+
   var blany =
-    svgDoc.getElementById("blancg").getBoundingClientRect().y -
-    svgDoc.getElementById("blancg").getBoundingClientRect().height / 2 +
-    facteur * (window.innerHeight / 2 - sizelogo / 2);
+    svgDoc.getElementById("blancd").getBoundingClientRect().y +
+    svgDoc.getElementById("blancd").getBoundingClientRect().height / 2 + facteur * (window.innerHeight / 2 - ((sizelogoy / 100) * window.innerHeight) / 2);
+  console.log("size :"+sizelogoy);
 
   var blandx =
     svgDoc.getElementById("blancd").getBoundingClientRect().x +
-    svgDoc.getElementById("blancd").getBoundingClientRect().width / 2 +
-    window.innerWidth / 2 -
-    ((sizelogo / 100) * window.innerWidth) / 2;
-  // console.log(blangx);
+    svgDoc.getElementById("blancd").getBoundingClientRect().width / 2 + window.innerWidth / 2 - ((sizelogox / 100) * window.innerWidth) / 2;
 
+  window.innerWidth / 2 -
+  ((sizelogox / 100) * window.innerWidth) / 2;
   var axisy = mouseposy - blany;
   var axisxdroite = mouseposx - blandx;
   var axisxgauche = mouseposx - blangx;
-  // if (mouseposy <= blany) {
-  //   console.log("dessus");
-  // } else if (mouseposy >= blany) {
-  //   console.log("dessous");
-  // }
+  if (mouseposy <= blany) {
+    console.log("dessus");
+  } else if (mouseposy >= blany) {
+    console.log("dessous");
+  }
+  if (mouseposx <= blandx) {
+    console.log("gauche");
+  } else if (mouseposx >= blandx) {
+    console.log("droite");
+  }
+  
   var variationd = Math.sqrt(100 / (axisxdroite * axisxdroite + axisy * axisy));
   var variationdx = variationd * axisxdroite;
   var variationdy = variationd * axisy;
