@@ -993,15 +993,25 @@ article {
 }
 
 .container_jours {
+  height: calc(100vh - 200px);
   display: flex;
   gap: 20px;
 }
 
 .container_jour {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
   flex-shrink: 0;
+  gap:5px;
   width: 100vw;
 }
 .jour_prog {
   width: 50vw;
   text-align: center;
+}
+
+.artiste_programme{
+  background-color: #30405f;
 }

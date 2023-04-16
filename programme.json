@@ -1,0 +1,60 @@
+{
+  "jours": [
+    {
+      "artistes": [
+        {
+          "nom": "Angèle",
+          "url": "/img/programme/programme_17_angele.png"
+        },
+        {
+          "nom": "Billie Eilish",
+          "url": "/img/programme/programme_17_billie.png"
+        },
+        {
+          "nom": "Pomme",
+          "url": "/img/programme/pomme344.png"
+        },
+        {
+          "nom": "Lorenzo",
+          "url": "/img/programme/lorenzo344.png"
+        },
+        {
+          "nom": "Shaka Ponk",
+          "url": "/img/programme/shkpnk_344.png"
+        },
+        {
+          "nom": "Red Hot Chili Peppers",
+          "url": "/img/programme/rhcp344.png"
+        }
+      ]
+    },
+    {
+      "artistes": [
+        {
+          "nom": "Maroon 5",
+          "url": "/img/programme/maroon5_344.png"
+        },
+        {
+          "nom": "Orelsan",
+          "url": "/img/programme/programme_18_orelsan.png"
+        },
+        {
+          "nom": "Coldplay",
+          "url": "/img/programme/coldplay344.png"
+        },
+        {
+          "nom": "Moby",
+          "url": "/img/programme/moby344.png"
+        },
+        {
+          "nom": "Sting",
+          "url": "/img/programme/sting344.png"
+        },
+        {
+          "nom": "Gojira",
+          "url": "/img/programme/gojira344.png"
+        }
+      ]
+    }
+  ]
+}
