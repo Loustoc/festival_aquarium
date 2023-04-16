@@ -1,7 +1,6 @@
 setTimeout(function () {
   document.querySelector("nav").classList.remove("invisible");
   document.querySelector(".logo_container").classList.remove("invisible");
-
 }, 1000);
 
 setInterval(checkvid, 10);
@@ -10,7 +9,6 @@ function checkvid() {
     document.querySelector("video").play();
   }
 }
-
 
 window.addEventListener("scroll", function (e) {
   if (window.innerWidth >= 429) {
@@ -25,16 +23,15 @@ window.addEventListener("scroll", function (e) {
         .classList.remove("scrolled_languette");
     }
   }
-
 });
 var navopen = 0;
 window.addEventListener("click", function (e) {
   if (
-    document
-      .querySelector(".circles_container")
-      .classList.contains("mobile_nav_active") &&
-    !e.target.classList.contains("logo_container")
+    document.querySelector(".circles_container").classList.contains("mobile_nav_active") && !(e.target.classList.contains("logo_container")) && !(e.currentTarget.classList.contains("burger_mobile"))
   ) {
+    console.log(e.target);
+    console.log("coucou");
+
     toggle_menu();
   }
 });
@@ -43,7 +40,11 @@ document
   .querySelector(".logo_container")
   .addEventListener("click", toggle_menu);
 
+document.querySelector(".burger_mobile").addEventListener("click", toggle_menu);
+
 function toggle_menu() {
+  console.log("fonc lancée");
+
   if (window.innerWidth >= 429) {
     window.scrollBy(0, -1 * document.documentElement.scrollTop);
   } else {
@@ -55,7 +56,9 @@ function toggle_menu() {
     ) {
       init = 0;
     }
-   
+
+    // console.log("1");
+
     document.querySelector(".flou_nav_open").classList.toggle("flou_active");
     document.querySelector(".circles_container").classList.add("circle_init");
     document.querySelector("html").classList.toggle("scroll_disabled");
@@ -69,6 +72,9 @@ function toggle_menu() {
     document.querySelector("#p").classList.toggle("menu_active");
 
     setTimeout(function () {
+
+      // console.log("2");
+
       $(b).arctext({ radius: 60, dir: -1 });
       $(bou).arctext({ radius: 100, dir: -1 });
 
@@ -82,6 +88,9 @@ function toggle_menu() {
         .querySelector(".circles_container")
         .classList.contains("mobile_nav_active")
     ) {
+
+      // console.log("3");
+
       document
         .querySelector("#about_curve")
         .classList.toggle("menu_active_visible");
@@ -96,6 +105,9 @@ function toggle_menu() {
         .querySelector(".circles_container")
         .classList.contains("mobile_nav_active")
     ) {
+
+      // console.log("4");
+
       setTimeout(function () {
         document
           .querySelector("#about_curve")
@@ -107,6 +119,9 @@ function toggle_menu() {
         document.querySelector("#b").classList.toggle("menu_active_visible");
       }, 300);
     } else {
+
+      // console.log("5");
+
       setTimeout(function () {
         document
           .querySelector("#about_curve")
@@ -120,3 +135,5 @@ function toggle_menu() {
   }
 }
 
+//Normal : 1/5/2
+//Anormal :  1/5/1/3/2

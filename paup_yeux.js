@@ -77,8 +77,8 @@ document.addEventListener("mousemove", (event) => {
   }
   mouseposx = event.pageX;
   mouseposy = event.pageY;
-  console.log(mouseposx);
-  console.log(mouseposy);
+  // console.log(mouseposx);
+  // console.log(mouseposy);
 
   lookat();
 });
@@ -96,8 +96,8 @@ function lookat() {
     var sizelogoy = (a_cont/window.innerHeight)*100;
     a = document.getElementById("logo_enter");
   }
-  console.log(a);
-  console.log(a_cont);
+  // console.log(a);
+  // console.log(a_cont);
  
   var svgDoc = a.contentDocument;
   var eyed = svgDoc.getElementById("eyed");
@@ -111,7 +111,6 @@ function lookat() {
   var blany =
     svgDoc.getElementById("blancd").getBoundingClientRect().y +
     svgDoc.getElementById("blancd").getBoundingClientRect().height / 2 + facteur * (window.innerHeight / 2 - ((sizelogoy / 100) * window.innerHeight) / 2);
-  console.log("size :"+sizelogoy);
 
   var blandx =
     svgDoc.getElementById("blancd").getBoundingClientRect().x +
@@ -122,16 +121,16 @@ function lookat() {
   var axisy = mouseposy - blany;
   var axisxdroite = mouseposx - blandx;
   var axisxgauche = mouseposx - blangx;
-  if (mouseposy <= blany) {
-    console.log("dessus");
-  } else if (mouseposy >= blany) {
-    console.log("dessous");
-  }
-  if (mouseposx <= blandx) {
-    console.log("gauche");
-  } else if (mouseposx >= blandx) {
-    console.log("droite");
-  }
+  // if (mouseposy <= blany) {
+  //   console.log("dessus");
+  // } else if (mouseposy >= blany) {
+  //   console.log("dessous");
+  // }
+  // if (mouseposx <= blandx) {
+  //   console.log("gauche");
+  // } else if (mouseposx >= blandx) {
+  //   console.log("droite");
+  // }
   
   var variationd = Math.sqrt(100 / (axisxdroite * axisxdroite + axisy * axisy));
   var variationdx = variationd * axisxdroite;
