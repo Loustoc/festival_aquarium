@@ -29,7 +29,11 @@ window.addEventListener("click", function (e) {
   console.log(e.target);
 
   if (
-    document.querySelector(".circles_container").classList.contains("mobile_nav_active") && !(e.target.classList.contains("logo_container"))&& !(e.target.classList.contains("burger_mobile"))
+    document
+      .querySelector(".circles_container")
+      .classList.contains("mobile_nav_active") &&
+    !e.target.classList.contains("logo_container") &&
+    !e.target.classList.contains("burger_mobile")
   ) {
     console.log("coucou");
 
@@ -37,30 +41,23 @@ window.addEventListener("click", function (e) {
   }
 });
 
-
 document
   .querySelector(".logo_container")
   .addEventListener("click", toggle_menu);
-  document
-  .querySelector(".burger_mobile")
-  .addEventListener("click", toggle_menu);
+document.querySelector(".burger_mobile").addEventListener("click", toggle_menu);
 
 function playAnimationBurger() {
   console.log("test anim");
   const svgatorObject = document.getElementById("animated-burger");
   const svgatorDocument = svgatorObject.contentDocument;
-  const svgatorElement = svgatorDocument.getElementById('bottom');
-  const svgatorElement2 = svgatorDocument.getElementById('top');
-  const svgatorElement3 = svgatorDocument.getElementById('middle');
+  const svgatorElement = svgatorDocument.getElementById("bottom");
+  const svgatorElement2 = svgatorDocument.getElementById("top");
+  const svgatorElement3 = svgatorDocument.getElementById("middle");
 
   svgatorElement.classList.toggle("rotation_bottom");
   svgatorElement2.classList.toggle("rotation_top");
   svgatorElement3.classList.toggle("invisible");
-
-
 }
-
-
 
 function toggle_menu() {
   playAnimationBurger();
@@ -93,7 +90,6 @@ function toggle_menu() {
     document.querySelector("#p").classList.toggle("menu_active");
 
     setTimeout(function () {
-
       // console.log("2");
 
       $(b).arctext({ radius: 60, dir: -1 });
@@ -109,7 +105,6 @@ function toggle_menu() {
         .querySelector(".circles_container")
         .classList.contains("mobile_nav_active")
     ) {
-
       // console.log("3");
 
       document
@@ -126,7 +121,6 @@ function toggle_menu() {
         .querySelector(".circles_container")
         .classList.contains("mobile_nav_active")
     ) {
-
       // console.log("4");
 
       setTimeout(function () {
@@ -140,7 +134,6 @@ function toggle_menu() {
         document.querySelector("#b").classList.toggle("menu_active_visible");
       }, 300);
     } else {
-
       // console.log("5");
 
       setTimeout(function () {

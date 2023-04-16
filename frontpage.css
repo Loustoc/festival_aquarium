@@ -5,11 +5,11 @@
 }
 
 /* nav*/
-.burger_mobile{
+.burger_mobile {
   position: fixed;
   z-index: 99999999999999999999999;
   width: 40px;
-  transform: translate(calc(50vw - 50%),10px);
+  transform: translate(calc(50vw - 50%), 10px);
 }
 html {
   overflow: hidden;
@@ -998,8 +998,7 @@ article {
   flex-shrink: 0;
   width: 100vw;
 }
-.jour_prog{
+.jour_prog {
   width: 50vw;
   text-align: center;
 }
-
