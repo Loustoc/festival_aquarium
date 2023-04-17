@@ -669,7 +669,7 @@ article {
   transition: 1s;
   display: flex;
   flex-direction: column;
-  padding-top: 200px;
+  padding-top: 150px;
 }
 .start_article {
   min-height: -webkit-fill-available;
@@ -1027,11 +1027,13 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 30vw;
+  width: 80px;
+  margin: 10px;
+  font-size: larger;
   text-align: ceter;
   background-color: #30405f76;
 
-  height: 30px;
+  height: 35px;
 }
 
 .artiste_programme {
