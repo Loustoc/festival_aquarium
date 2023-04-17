@@ -83,7 +83,7 @@ nav ul li {
 .flou_active {
   z-index: 999;
   animation: flou_progressif;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 }
 
