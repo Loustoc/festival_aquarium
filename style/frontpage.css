@@ -669,7 +669,7 @@ article {
   transition: 1s;
   display: flex;
   flex-direction: column;
-  padding-top: 150px;
+  padding-top: 170px;
 }
 .start_article {
   min-height: -webkit-fill-available;
