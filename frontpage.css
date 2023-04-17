@@ -72,21 +72,30 @@ nav ul li {
 }
 
 .flou_nav_open {
-  backdrop-filter: blur(6px);
   position: fixed;
   top: 0;
   width: 100vw;
   height: 100vh;
   z-index: -999999999;
-  opacity: 0;
-  transition: 1s;
+  
 }
 
 .flou_active {
   z-index: 999;
+  animation: flou_progressif;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
 
-  opacity: 1;
-  transition: 1s;
+@keyframes flou_progressif {
+  from{
+  backdrop-filter: blur(0px);
+
+  }
+  to{
+  backdrop-filter: blur(6px);
+  }
+  
 }
 
 .scroll_disabled {
