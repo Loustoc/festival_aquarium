@@ -26,7 +26,7 @@ window.addEventListener("scroll", function (e) {
 });
 var navopen = 0;
 window.addEventListener("click", function (e) {
-  console.log(e.target);
+  // console.log(e.target);
 
   if (
     document

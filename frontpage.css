@@ -343,8 +343,8 @@ main {
   }
 }
 @media screen and (min-width: 429px) {
-  .burger_mobile{
-    opacity: 0.0;
+  .burger_mobile {
+    opacity: 0;
     z-index: -9999999;
   }
   .nav_desktop {
@@ -1002,9 +1002,9 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   flex-shrink: 0;
-  gap:5px;
+  gap: 5px;
   width: 100vw;
 }
 .jour_prog {
@@ -1012,6 +1012,6 @@ article {
   text-align: center;
 }
 
-.artiste_programme{
+.artiste_programme {
   background-color: #30405f;
 }
