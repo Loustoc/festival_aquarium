@@ -101,9 +101,13 @@ window.addEventListener("resize", repartition);
 select_jour17.addEventListener("click", () => {
   console.log("coucou");
   jour_selected = 17;
+  select_jour17.classList.toggle("selected_jour_programme");
+  select_jour18.classList.toggle("selected_jour_programme");
   addartistes();
 });
 select_jour18.addEventListener("click", () => {
+  select_jour17.classList.toggle("selected_jour_programme");
+  select_jour18.classList.toggle("selected_jour_programme");
   jour_selected = 18;
   addartistes();
 });

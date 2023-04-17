@@ -996,8 +996,14 @@ article {
 .choix_jour_programme {
   display: flex;
   width: 100vw;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
-
+.selected_jour_programme {
+  transition: all 1s;
+  background-color: #30405f76 !important;
+}
 .container_jours {
   height: calc(100vh - 200px);
   display: flex;
@@ -1015,8 +1021,15 @@ article {
   width: 100vw;
 }
 .jour_prog {
-  width: 50vw;
-  text-align: center;
+  transition: all 1s;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  text-align: ceter;
+  background-color: #b8dcff58;
+  height: 30px;
 }
 
 .artiste_programme {
