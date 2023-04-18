@@ -1003,7 +1003,6 @@ article {
 .selected_jour_programme {
   transition: all 1s;
   background-color: #b8dcff58 !important;
-
 }
 .container_jours {
   height: calc(100vh - 200px);

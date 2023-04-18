@@ -17,6 +17,12 @@
   top: 0;
   transform: translate(calc(50vw - 50%), calc(50vh - 50%));
 }
+.fadein_vid {
+  animation-name: slide_off;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+animation-direction: reverse;
+}
 .fadeout_vid {
   animation-name: anim_scaled;
   animation-duration: 0.5s;
@@ -121,6 +127,8 @@ body {
 
 @keyframes slide_off {
   0% {
+    opacity: 1;
+
   }
   100% {
     opacity: 0;

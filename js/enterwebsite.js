@@ -1,4 +1,6 @@
 const cache_home = document.querySelector(".cache_home");
+const isAppleDevice = true;
+
 var home_page = false;
 setTimeout(function () {
   document.querySelector("#festival_typo").classList.remove("invisible");
@@ -7,13 +9,23 @@ setTimeout(function () {
 }, 1000);
 
 function open_website() {
-  let anim = document.createElement("video");
-  anim.src = "anim.webm";
+  let anim = document.createElement("img");
+  if (isAppleDevice) {
+    anim.classList.add("fadein_vid");
+    document.body.appendChild(anim);
+    anim.src = "/img/anim.gif";
+    setTimeout(function () {
+    anim.classList.remove("fadein_vid");
+    },1000);
+  } else {
+    anim.src = "/img/anim.webm";
+    document.body.appendChild(anim);
+    anim.play();
+  }
   anim.classList.add("anim_intro");
   document.querySelector(".container_enter").classList.add("slide_off");
   setTimeout(function () {
-    document.body.appendChild(anim);
-    anim.play();
+    
     home_page = true;
     setTimeout(function () {
       anim.classList.add("fadeout_vid");
@@ -23,19 +35,29 @@ function open_website() {
         document.querySelector(".container_enter").remove();
         document.querySelector(".cache_home").remove();
       }, 1000);
-    }, 3000);
+    }, 2000);
   }, 1000);
 }
 
-
 const testNav = () => {
-  if ( !(navigator.userAgent.match(/iPhone/i))
-  && !(navigator.userAgent.match(/iPad/i))
-  && !(navigator.userAgent.indexOf('Mac OS X') != -1)) {
-     document.querySelector(".start_article").style.minHeight = "-webkit-fill-available";
+  if (
+    !navigator.userAgent.match(/iPhone/i) &&
+    !navigator.userAgent.match(/iPad/i) &&
+    !(navigator.userAgent.indexOf("Mac OS X") != -1)
+  ) {
+    document.querySelector(".start_article").style.minHeight =
+      "-webkit-fill-available";
+    isAppleDevice = false;
   }
-}
-         
- 
+};
 
-      testNav();
+testNav();
+
+const testGif = () => {
+  let anim = document.createElement("img");
+  anim.classList.add("anim_intro");
+
+  document.body.appendChild(anim);
+    anim.src = "/img/anim.gif";
+    
+}
