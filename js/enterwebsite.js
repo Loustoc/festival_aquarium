@@ -26,3 +26,16 @@ function open_website() {
     }, 3000);
   }, 1000);
 }
+
+
+const testNav = () => {
+  if ( !(navigator.userAgent.match(/iPhone/i))
+  && !(navigator.userAgent.match(/iPad/i))
+  && !(navigator.userAgent.indexOf('Mac OS X') != -1)) {
+     document.querySelector(".start_article").style.minHeight = "-webkit-fill-available";
+  }
+}
+         
+ 
+
+      testNav();
