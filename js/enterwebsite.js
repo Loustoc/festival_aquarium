@@ -3,6 +3,7 @@ var isAppleDevice = true;
 var isMobileDevice = false;
 var classvisible;
 var classbubble;
+var userAgent = new UserAgent().parse(navigator.userAgent);
 
 var home_page = false;
 setTimeout(function () {
@@ -68,8 +69,8 @@ const testNav = () => {
     document.querySelector(".start_article").style.minHeight =
       "-webkit-fill-available";
   }
-  //  if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgentData.mobile || typeof screen.orientation !== 'undefined'){
-  if (screen.orientation.type != undefined) {
+
+  if (userAgent.isMobile) {
     isMobileDevice = true;
     document.querySelectorAll(".info_bubble").forEach((info) => {
       info.classList.add("info_bubble_mobile");

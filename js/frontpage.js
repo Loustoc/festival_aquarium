@@ -115,7 +115,7 @@ function apropos() {
     .classList.toggle("main_scroll" + current_state);
 }
 
-function lineup() {
+function programme() {
   current_state = 1;
   for (let i = 0; i < 4; i++) {
     document.querySelector("main").classList.remove("main_scroll" + i);
