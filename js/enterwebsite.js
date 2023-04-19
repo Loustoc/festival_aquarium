@@ -4,7 +4,6 @@ var isMobileDevice = false;
 var classvisible;
 var classbubble;
 
-
 var home_page = false;
 setTimeout(function () {
   document.querySelector("#festival_typo").classList.remove("invisible");
@@ -14,7 +13,7 @@ setTimeout(function () {
 
 function open_website() {
   if (isAppleDevice) {
-  let anim = document.createElement("img");
+    let anim = document.createElement("img");
 
     anim.classList.add("fadein_vid");
     document.body.appendChild(anim);
@@ -37,7 +36,7 @@ function open_website() {
       }, 2000);
     }, 1000);
   } else {
-  let anim = document.createElement("video");
+    let anim = document.createElement("video");
     anim.src = "/anim.webm";
     anim.classList.add("vid_intro");
     document.body.appendChild(anim);
@@ -57,7 +56,6 @@ function open_website() {
       }, 2000);
     }, 1000);
   }
- 
 }
 
 const testNav = () => {
@@ -71,16 +69,19 @@ const testNav = () => {
       "-webkit-fill-available";
   }
   //  if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgentData.mobile || typeof screen.orientation !== 'undefined'){
-    if (screen.orientation.type != undefined){
+  if (screen.orientation.type != undefined) {
     isMobileDevice = true;
-    document.querySelectorAll(".info_bubble").forEach(info=>{info.classList.add("info_bubble_mobile");});
-    document.querySelectorAll(".info_bubble_mobile").forEach(info=>{info.classList.remove("info_bubble");});
-     classvisible = "info_bubble_mobile_visible";
-     classbubble ="info_bubble_mobile";
-  }
-  else {
-     classvisible="info_visible";
-     classbubble="info_bubble";
+    document.querySelectorAll(".info_bubble").forEach((info) => {
+      info.classList.add("info_bubble_mobile");
+    });
+    document.querySelectorAll(".info_bubble_mobile").forEach((info) => {
+      info.classList.remove("info_bubble");
+    });
+    classvisible = "info_bubble_mobile_visible";
+    classbubble = "info_bubble_mobile";
+  } else {
+    classvisible = "info_visible";
+    classbubble = "info_bubble";
   }
 };
 
