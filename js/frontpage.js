@@ -179,6 +179,8 @@ window.addEventListener("click", (e) => {
     liste_pass[0].classList.remove("deselected_pass");
     liste_pass[0].classList.add("selected_pass");
     liste_pass[1].classList.add("deselected_pass");
+    document.querySelector(".deselected_pass").setAttribute('data-before', 'JOURNEE');
+
     liste_pass[1].classList.remove("selected_pass");
     document.querySelector(".achat2").classList.add("achat_invisible");
   } else if (
@@ -193,6 +195,8 @@ window.addEventListener("click", (e) => {
     liste_pass[1].classList.add("selected_pass");
     liste_pass[0].classList.add("deselected_pass");
     liste_pass[0].classList.remove("selected_pass");
+    document.querySelector(".deselected_pass").setAttribute('data-before', '2 JOURS');
+
     document.querySelector(".achat1").classList.add("achat_invisible");
   }
 });
