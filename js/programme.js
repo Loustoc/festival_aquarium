@@ -23,6 +23,8 @@ const repartition = () => {
         image.style.height = `${(height_block - 30 - decalage_images) / 2}px`;
       });
     }
+    container_prog_jour.style.width = `${width_block - 20}px`;
+    container_prog_jour.style.height = `${height_block - 20}px`;
   } else {
     if (2 * (height_block / 3) < width_block - 10) {
       images.forEach((image) => {
@@ -36,6 +38,8 @@ const repartition = () => {
         image.style.height = `${(width_block - 30 - decalage_images) / 2}px`;
       });
     }
+    container_prog_jour.style.width = `${width_block - 20}px`;
+    container_prog_jour.style.height = `${height_block - 20}px`;
   }
 };
 
@@ -43,7 +47,7 @@ const handleLoadImg = () => {
   container_prog_jour.classList.toggle("invisible");
   setTimeout(() => {
     container_prog_jour.classList.toggle("invisible");
-  }, 1500);
+  }, 1000);
   // let artistes_spin = document.querySelectorAll(".artiste_programme");
   // artistes_spin.forEach((artiste) => {
   //   artiste.classList.toggle("artiste_loading");

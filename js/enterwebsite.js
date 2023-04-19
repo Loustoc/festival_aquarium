@@ -15,8 +15,8 @@ function open_website() {
     document.body.appendChild(anim);
     anim.src = "/img/anim.gif";
     setTimeout(function () {
-    anim.classList.remove("fadein_vid");
-    },1000);
+      anim.classList.remove("fadein_vid");
+    }, 1000);
   } else {
     anim.src = "/img/anim.webm";
     document.body.appendChild(anim);
@@ -25,7 +25,6 @@ function open_website() {
   anim.classList.add("anim_intro");
   document.querySelector(".container_enter").classList.add("slide_off");
   setTimeout(function () {
-    
     home_page = true;
     setTimeout(function () {
       anim.classList.add("fadeout_vid");
@@ -58,6 +57,5 @@ const testGif = () => {
   anim.classList.add("anim_intro");
 
   document.body.appendChild(anim);
-    anim.src = "/img/anim.gif";
-    
-}
+  anim.src = "/img/anim.gif";
+};

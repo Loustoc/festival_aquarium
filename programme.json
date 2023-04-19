@@ -16,15 +16,15 @@
         },
         {
           "nom": "Lorenzo",
-          "url": "/img/programme/programme_lorenzo.png"
+          "url": "/img/programme/programme_lorenzo.jpg"
         },
         {
           "nom": "Shaka Ponk",
-          "url": "/img/programme/shkpnk_344.png"
+          "url": "/img/programme/programme_shkpnk.jpg"
         },
         {
           "nom": "Red Hot Chili Peppers",
-          "url": "/img/programme/rhcp344.png"
+          "url": "/img/programme/programme_RHCP.jpg"
         }
       ]
     },
@@ -52,7 +52,7 @@
         },
         {
           "nom": "Gojira",
-          "url": "/img/programme/gojira344.png"
+          "url": "/img/programme/programme_gojira.jpg"
         }
       ]
     }
