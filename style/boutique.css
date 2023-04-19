@@ -22,8 +22,19 @@ nav::before {
   z-index: 9999999999;
   flex-shrink: 0;
 }
-.container_produits{
-  transform: translate(200px,30px);
+.acheter{
+  background-color: #222e46;
+  width: 100px;
+  border-radius: 1000px;
+  text-align: center;
+}
+.bandeau_produit{
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.37);
+  transform: translateY(-100px);
+}
+.container_produits {
+  transform: translate(200px, 30px);
   background-color: #445b8d;
   height: calc(100vh - 60px);
   width: calc(100vw - 230px);
@@ -35,16 +46,16 @@ nav::before {
   gap: 30px;
   padding: 30px;
 }
-.produits{
-  transform: translate(5px,5px);
+.produits {
+  transform: translate(5px, 5px);
   width: calc((100vw - 230px - 100px) / 2);
   height: calc((100vh - 60px - 110px) / 2);
   /* width: 250px; */
   /* height: 250px; */
   overflow: hidden;
-  border-radius:20px;
+  border-radius: 20px;
 }
-.img_prod{
+.img_prod {
   width: inherit;
   height: inherit;
   object-fit: cover;
