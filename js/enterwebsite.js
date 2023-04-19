@@ -71,8 +71,7 @@ const testNav = () => {
       "-webkit-fill-available";
   }
   //  if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgentData.mobile || typeof screen.orientation !== 'undefined'){
-    if (navigator.userAgentData.mobile || navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/iPhone/i)){
+    if (navigator.userAgentData.mobile || screen.orientation.type != undefined){
     isMobileDevice = true;
     document.querySelectorAll(".info_bubble").forEach(info=>{info.classList.add("info_bubble_mobile");});
     document.querySelectorAll(".info_bubble_mobile").forEach(info=>{info.classList.remove("info_bubble");});
