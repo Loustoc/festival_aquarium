@@ -56,7 +56,7 @@ const testNav = () => {
     isMobileDevice = true;
     document.querySelector(".info_bubble").classList.add("info_bubble_mobile");
     document.querySelector(".info_bubble_mobile").classList.remove("info_bubble");
-     classvisible = "info_bubble_mobile_visible"
+     classvisible = "info_bubble_mobile_visible";
      classbubble ="info_bubble_mobile";
   }
   else {
