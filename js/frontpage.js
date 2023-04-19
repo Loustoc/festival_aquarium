@@ -107,7 +107,9 @@ addEventListener("wheel", (e) => {
     }
   }
 });
-
+function boutique() {
+  window.open("/boutique.html", "_blank")
+}
 function apropos() {
   current_state = 2;
   for (let i = 0; i < 4; i++) {
