@@ -1026,8 +1026,8 @@ article {
   flex-wrap: wrap;
   flex-shrink: 0;
   gap: 5px;
-  max-width: 1020px;
-  max-height: 830px;
+  max-width: 1030px;
+  max-height: 560px;
   /* width: 100vw; */
 }
 .jour_prog {
