@@ -31,9 +31,7 @@ select{
   content: 1;
   background-color: #f1f1f1;
 }
-.combien{
 
-}
 .acheter{
   background-color: #222e46;
   width: 100px;
@@ -44,15 +42,22 @@ select{
   border-radius: 1000px;
   text-align: center;
 }
+.produits:hover > .bandeau_produit{
+  transform: translateY(-100px);
+  transition: all 0.5s;
+  opacity: 1;
+}
 .bandeau_produit{
-  border-radius: 30px;
+  opacity: 0;
+  border-radius: 20px;
+  transition: all 0.5s;
   gap: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
   background-color: rgba(255, 255, 255, 0.37);
-  transform: translateY(-100px);
+  /* transform: translateY(-100px); */
 }
 .container_produits {
   transform: translate(200px, 30px);
