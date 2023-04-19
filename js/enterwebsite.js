@@ -22,10 +22,10 @@ function open_website() {
       anim.classList.remove("fadein_vid");
     }, 1000);
   } else {
-    anim.src = "/anim.webm";
+    anim.src = "anim.webm";
     anim.classList.add("vid_intro");
     document.body.appendChild(anim);
-document.querySelector(".vid_intro").play();
+    document.querySelector(".vid_intro").play();
   }
   anim.classList.add("anim_intro");
   document.querySelector(".container_enter").classList.add("slide_off");
