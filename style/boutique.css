@@ -659,3 +659,15 @@
     backdrop-filter: blur(4px);
     filter:grayscale(0.5);
 }
+
+nav::before{
+  width: 100vw;
+  height: 100vw;
+  transform: translateY(-90vw);
+  content:"";
+  border-radius: 20vw;
+  position: fixed;
+  background-color: #30405f;
+  top: 0;
+  z-index: 9999999999;
+}

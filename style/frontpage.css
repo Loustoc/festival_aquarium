@@ -692,7 +692,7 @@ article {
   transition: 1s;
   display: flex;
   flex-direction: column;
-  padding-top: 170px;
+  padding-top: 130px;
 }
 .start_article {
   /* min-height: -webkit-fill-available; */
