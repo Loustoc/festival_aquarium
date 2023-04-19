@@ -22,6 +22,15 @@ nav::before {
   z-index: 9999999999;
   flex-shrink: 0;
 }
+.container_produits{
+  transform: translate(200px,30px);
+  background-color: #445b8d;
+  height: calc(100vh - 60px);
+  width: calc(100vw - 230px);
+  z-index: 999999;
+  position: fixed;
+  border-radius: 30px;
+}
 
 nav {
   transform: translate(30px);
@@ -31,10 +40,10 @@ nav {
   height: 80vh;
   gap: 140px;
   align-items: center;
-  width: 13vw;
   border-radius: 1000000px;
   position: fixed;
   transition: 1s;
+  width: 140px;
 }
 nav ul {
   /* width: 100vw; */
