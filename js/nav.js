@@ -40,11 +40,12 @@ window.addEventListener("click", function (e) {
     toggle_menu();
   }
 });
-const checkifnotburger = (e) =>{
+const checkifnotactive = (e) =>{
   // console.log(e.target);
   // window.addEventListener("mouseover", function (e) {
-  //   if (!(e.target.classList.contains(".burger_mobile"))&&!(e.target.classList.contains(".nav_mobile"))){
-      toggle_menu();
+    if (!(document.querySelector(".flou_nav_open").classList.contains("flou_active"))){
+      setTimeout(
+      toggle_menu(),100);}
     // }
   // })
 }
@@ -53,8 +54,8 @@ document
   .querySelector(".logo_container")
   .addEventListener("click", toggle_menu);
 document.querySelector(".burger_mobile").addEventListener("click", toggle_menu);
-document.querySelector(".logo_container").addEventListener("mouseenter", toggle_menu);
-document.querySelector(".nav_mobile").addEventListener("mouseleave", checkifnotburger);
+document.querySelector(".logo_container").addEventListener("mouseenter", checkifnotactive);
+document.querySelector(".nav_mobile").addEventListener("mouseleave", toggle_menu);
 
 
 
