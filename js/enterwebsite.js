@@ -22,27 +22,42 @@ function open_website() {
     setTimeout(function () {
       anim.classList.remove("fadein_vid");
     }, 1000);
+    anim.classList.add("anim_intro");
+    document.querySelector(".container_enter").classList.add("slide_off");
+    setTimeout(function () {
+      home_page = true;
+      setTimeout(function () {
+        anim.classList.add("fadeout_vid");
+        cache_home.classList.add("invisible");
+        cache_home.style.zIndex = -9999;
+        setTimeout(function () {
+          document.querySelector(".container_enter").remove();
+          document.querySelector(".cache_home").remove();
+        }, 1000);
+      }, 2000);
+    }, 1000);
   } else {
   let anim = document.createElement("video");
     anim.src = "/anim.webm";
     anim.classList.add("vid_intro");
     document.body.appendChild(anim);
     anim.play();
-  }
-  anim.classList.add("anim_intro");
-  document.querySelector(".container_enter").classList.add("slide_off");
-  setTimeout(function () {
-    home_page = true;
+    anim.classList.add("anim_intro");
+    document.querySelector(".container_enter").classList.add("slide_off");
     setTimeout(function () {
-      anim.classList.add("fadeout_vid");
-      cache_home.classList.add("invisible");
-      cache_home.style.zIndex = -9999;
+      home_page = true;
       setTimeout(function () {
-        document.querySelector(".container_enter").remove();
-        document.querySelector(".cache_home").remove();
-      }, 1000);
-    }, 2000);
-  }, 1000);
+        anim.classList.add("fadeout_vid");
+        cache_home.classList.add("invisible");
+        cache_home.style.zIndex = -9999;
+        setTimeout(function () {
+          document.querySelector(".container_enter").remove();
+          document.querySelector(".cache_home").remove();
+        }, 1000);
+      }, 2000);
+    }, 1000);
+  }
+ 
 }
 
 const testNav = () => {
