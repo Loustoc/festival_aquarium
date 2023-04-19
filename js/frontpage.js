@@ -14,7 +14,7 @@ window.addEventListener("touchstart", (e) => {
 
 window.addEventListener("touchmove", (e) => {
   if (
-    !e.target.parentNode.parentNode.parentNode.classList.contains("info_bubble")
+    !e.target.parentNode.parentNode.parentNode.classList.contains(classvisible)
   ) {
     console.log(e.target);
     if (scrolling == 0) {
@@ -62,7 +62,7 @@ window.addEventListener("touchmove", (e) => {
 
 addEventListener("wheel", (e) => {
   if (
-    !e.target.parentNode.parentNode.parentNode.classList.contains("info_bubble")
+    !e.target.parentNode.parentNode.parentNode.classList.contains(classvisible)
   ) {
     // console.log(e.deltaY);
     offset_scroll = e.deltaY;
@@ -136,11 +136,11 @@ function billetterie() {
 }
 
 function engagement() {
-  document.querySelector(".engag").classList.toggle("info_visible");
+  document.querySelector(".engag").classList.toggle(classvisible);
 }
 
 function about_fest() {
-  document.querySelector(".about_fest").classList.toggle("info_visible");
+  document.querySelector(".about_fest").classList.toggle(classvisible);
 }
 
 function reco() {
@@ -153,7 +153,7 @@ function carte() {
 
 function close_info(e) {
   console.log(e.target);
-  e.target.parentNode.parentNode.classList.toggle("info_visible");
+  e.target.parentNode.parentNode.classList.toggle(classvisible);
 }
 
 function choixdate(e) {
