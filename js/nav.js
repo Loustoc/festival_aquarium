@@ -1,3 +1,5 @@
+var nav_closed = false;
+
 setTimeout(function () {
   document.querySelector("nav").classList.remove("invisible");
   document.querySelector(".logo_container").classList.remove("invisible");
@@ -40,6 +42,11 @@ window.addEventListener("click", function (e) {
     toggle_menu();
   }
 });
+const checkifinactive = () =>{
+  if (nav_closed == false){
+    toggle_menu();
+  }
+}
 const checkifnotactive = (e) =>{
   // console.log(e.target);
   // window.addEventListener("mouseover", function (e) {
@@ -49,13 +56,13 @@ const checkifnotactive = (e) =>{
     // }
   // })
 }
-
+nav_closed
 document
   .querySelector(".logo_container")
   .addEventListener("click", toggle_menu);
 document.querySelector(".burger_mobile").addEventListener("click", toggle_menu);
 document.querySelector(".logo_container").addEventListener("mouseenter", checkifnotactive);
-document.querySelector(".nav_mobile").addEventListener("mouseleave", toggle_menu);
+document.querySelector(".nav_mobile").addEventListener("mouseleave", checkifinactive);
 
 
 

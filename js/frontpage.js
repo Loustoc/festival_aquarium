@@ -11,6 +11,9 @@ var current_state = 0;
 window.addEventListener("touchstart", (e) => {
   y_start = e.touches[0].pageY;
 });
+const togglenavclosed = ()=>{
+setTimeout(()=>{nav_closed = false;},1000);
+}
 
 window.addEventListener("touchmove", (e) => {
   if (
@@ -113,6 +116,9 @@ function apropos() {
   document
     .querySelector("main")
     .classList.toggle("main_scroll" + current_state);
+    nav_closed = true;
+    togglenavclosed();
+
 }
 
 function programme() {
@@ -123,6 +129,8 @@ function programme() {
   document
     .querySelector("main")
     .classList.toggle("main_scroll" + current_state);
+    nav_closed = true;
+    togglenavclosed();
 }
 
 function billetterie() {
@@ -133,6 +141,10 @@ function billetterie() {
   document
     .querySelector("main")
     .classList.toggle("main_scroll" + current_state);
+    nav_closed = true;
+    togglenavclosed();
+
+
 }
 
 function engagement() {
