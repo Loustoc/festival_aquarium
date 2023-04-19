@@ -17,19 +17,35 @@ const repartition = () => {
     if (2 * ((width_block - 20) / 3) < height_block) {
       images.forEach((image) => {
         image.style.height = `${(width_block - 30 - decalage_images) / 3}px`;
+        container_prog_jour.style.width = `${
+          (width_block + 30 + decalage_images)
+        }px`;
+        container_prog_jour.style.height = `${
+          (width_block - 30 - decalage_images) * 2/3
+        }px`;
       });
     } else {
       images.forEach((image) => {
         image.style.height = `${(height_block - 30 - decalage_images) / 2}px`;
+        container_prog_jour.style.width = `${
+          (height_block + 30 + decalage_images) * 3/2
+        }px`;
+        container_prog_jour.style.height = `${
+          (height_block - 30 - decalage_images)
+        }px`;
       });
     }
-    container_prog_jour.style.width = `${width_block - 20}px`;
-    container_prog_jour.style.height = `${height_block - 20}px`;
   } else {
     if (2 * (height_block / 3) < width_block - 10) {
       images.forEach((image) => {
         image.style.height = `${(height_block - 30 - decalage_images) / 3}px`;
       });
+      container_prog_jour.style.width = `${
+        (height_block + 30 + decalage_images) * 2/3
+      }px`;
+      container_prog_jour.style.height = `${
+        (height_block - 30 - decalage_images)
+      }px`;
       console.log("cas 1");
     } else {
       console.log("cas 2");
@@ -37,9 +53,13 @@ const repartition = () => {
       images.forEach((image) => {
         image.style.height = `${(width_block - 30 - decalage_images) / 2}px`;
       });
+      container_prog_jour.style.width = `${
+        (width_block + 30 + decalage_images)
+      }px`;
+      container_prog_jour.style.height = `${
+        (width_block - 30 - decalage_images) * 3/2
+      }px`;
     }
-    container_prog_jour.style.width = `${width_block - 20}px`;
-    container_prog_jour.style.height = `${height_block - 20}px`;
   }
 };
 
