@@ -25,7 +25,7 @@ function open_website() {
     anim.src = "/anim.webm";
     anim.classList.add("vid_intro");
     document.body.appendChild(anim);
-    andocument.querySelector(".vid_intro").play();
+document.querySelector(".vid_intro").play();
   }
   anim.classList.add("anim_intro");
   document.querySelector(".container_enter").classList.add("slide_off");
