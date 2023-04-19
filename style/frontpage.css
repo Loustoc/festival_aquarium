@@ -851,14 +851,25 @@ article {
   transition: 1s;
   margin-top: 200px;
 }
+@media screen and (min-width: 800px) {
+  .pass{
+    width: 50%;
 
+  }
+}
+@media screen and (max-width: 799px) {
+  .pass_container{
+  flex-direction: column;
+    
+  }
+}
 .pass_container {
-  height: 70vh;
   width: 80vw;
+  height: 70vh;
   transform: translate(calc(50vw - 50%));
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 }
 
