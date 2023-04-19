@@ -13,8 +13,9 @@ setTimeout(function () {
 }, 1000);
 
 function open_website() {
-  let anim = document.createElement("img");
   if (isAppleDevice) {
+  let anim = document.createElement("img");
+
     anim.classList.add("fadein_vid");
     document.body.appendChild(anim);
     anim.src = "/img/anim.gif";
@@ -22,10 +23,11 @@ function open_website() {
       anim.classList.remove("fadein_vid");
     }, 1000);
   } else {
-    anim.src = "anim.webm";
+  let anim = document.createElement("video");
+    anim.src = "/anim.webm";
     anim.classList.add("vid_intro");
     document.body.appendChild(anim);
-    document.querySelector(".vid_intro").play();
+    anim.play();
   }
   anim.classList.add("anim_intro");
   document.querySelector(".container_enter").classList.add("slide_off");
