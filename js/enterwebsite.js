@@ -73,8 +73,8 @@ const testNav = () => {
   //  if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgentData.mobile || typeof screen.orientation !== 'undefined'){
     if (navigator.userAgentData.mobile){
     isMobileDevice = true;
-    document.querySelector(".info_bubble").classList.add("info_bubble_mobile");
-    document.querySelector(".info_bubble_mobile").classList.remove("info_bubble");
+    document.querySelectorAll(".info_bubble").forEach(info=>{info.classList.add("info_bubble_mobile");});
+    document.querySelectorAll(".info_bubble_mobile").forEach(info=>{info.classList.remove("info_bubble");});
      classvisible = "info_bubble_mobile_visible";
      classbubble ="info_bubble_mobile";
   }
