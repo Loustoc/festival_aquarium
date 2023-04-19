@@ -10,20 +10,20 @@ function checkvid() {
   }
 }
 
-window.addEventListener("scroll", function (e) {
-  if (window.innerWidth >= 429) {
-    var a = 100;
-    if (document.documentElement.scrollTop > 0) {
-      document.querySelector(".logo_nav").classList.add("scrolled");
-      document.querySelector("#languette").classList.add("scrolled_languette");
-    } else {
-      document.querySelector(".logo_nav").classList.remove("scrolled");
-      document
-        .querySelector("#languette")
-        .classList.remove("scrolled_languette");
-    }
-  }
-});
+// window.addEventListener("scroll", function (e) {
+//   if (window.innerWidth >= 429) {
+//     var a = 100;
+//     if (document.documentElement.scrollTop > 0) {
+//       document.querySelector(".logo_nav").classList.add("scrolled");
+//       document.querySelector("#languette").classList.add("scrolled_languette");
+//     } else {
+//       document.querySelector(".logo_nav").classList.remove("scrolled");
+//       document
+//         .querySelector("#languette")
+//         .classList.remove("scrolled_languette");
+//     }
+//   }
+// });
 var navopen = 0;
 window.addEventListener("click", function (e) {
   // console.log(e.target);
