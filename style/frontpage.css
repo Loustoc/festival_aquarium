@@ -811,7 +811,7 @@ article {
   transition: 1s;
   z-index: 9999999;
   /* transform: translate(-140vw, calc(100vh / 2 - 50% + 100px)); */
-  /* transform: translate(-140vw, calc((var(--vh, 1vh)*100) / 2 - 50% + 100px)); */
+  transform: translate(-140vw, calc((var(--vh, 1vh)*100) / 2 - 50%));
 
   background-color: #30405f;
   display: flex;
@@ -832,7 +832,7 @@ article {
   padding-left: 30px;
 }
 .info_visible {
-  /* transform: translate(0px, calc(100vh / 2 - 50% + 100px)); */
+  transform: translate(0px, calc(100vh / 2 - 50%));
   /* transform: translate(0px, calc((var(--vh, 1vh)*100) / 2 - 50% + 100px)); */
   transition: 1s;
   z-index: 9999999;
