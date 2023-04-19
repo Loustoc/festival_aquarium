@@ -22,7 +22,7 @@ function open_website() {
       anim.classList.remove("fadein_vid");
     }, 1000);
   } else {
-    anim.src = "/img/anim.webm";
+    anim.src = "/anim.webm";
     document.body.appendChild(anim);
     anim.play();
   }
