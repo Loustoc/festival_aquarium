@@ -204,14 +204,14 @@ const prix_slide = document.querySelectorAll(".subcont");
 function troisconsos(e) {
   if (e.target.parentNode.parentNode == liste_pass[0]) {
     pastilles[0].style.transform = `translate(calc(${
-      document.querySelector(".choix_conso").getBoundingClientRect().width
+      document.querySelectorAll(".choix_conso")[0].getBoundingClientRect().width
     }px - 63px),-3px`;
     pastilles[0].style.width = `
 68px`;
     prix_slide[0].style.transform = `translate(-50%)`;
   } else {
     pastilles[1].style.transform = `translate(calc(${
-      document.querySelector(".choix_conso").getBoundingClientRect().width
+      document.querySelectorAll(".choix_conso")[1].getBoundingClientRect().width
     }px - 63px),-3px`;
     pastilles[1].style.width = `
 68px`;
