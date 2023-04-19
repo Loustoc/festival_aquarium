@@ -44,13 +44,17 @@ const testNav = () => {
     !navigator.userAgent.match(/iPad/i) &&
     !(navigator.userAgent.indexOf("Mac OS X") != -1)
   ) {
+    isAppleDevice = false;
     document.querySelector(".start_article").style.minHeight =
       "-webkit-fill-available";
   }
    if (navigator.userAgent.match(/Android/i)){
-    isAppleDevice = false;
     document.querySelector(".info_visible").style.transform = "transform: translate(0px, calc((var(--vh, 1vh)*100) / 2 - 50%))";
     document.querySelector(".info_bubble").style.transform = "transform: translate(-140vw, calc((var(--vh, 1vh)*100) / 2 - 50%))";
+  }
+  else {
+    document.querySelector(".info_visible").style.transform = "transform: translate(0px, calc((var(--vh, 1vh)*100) / 2 - 50% + 100))";
+    document.querySelector(".info_bubble").style.transform = "transform: translate(-140vw, calc((var(--vh, 1vh)*100) / 2 - 50% + 100))";
   }
 };
 
