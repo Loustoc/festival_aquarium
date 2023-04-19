@@ -383,7 +383,7 @@ nav {
     transform: translateY(10px);
   }
   .dates_lieu {
-    transform: translateY(180px) !important;
+    transform: translateY(140px) !important;
   }
 }
 
@@ -692,7 +692,7 @@ article {
   transition: 1s;
   display: flex;
   flex-direction: column;
-  padding-top: 130px;
+  padding-top: 140px;
 }
 .start_article {
   /* min-height: -webkit-fill-available; */
