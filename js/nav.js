@@ -26,7 +26,7 @@ function checkvid() {
 // });
 var navopen = 0;
 window.addEventListener("click", function (e) {
-  // console.log(e.target);
+  console.log(e.target);
 
   if (
     document
@@ -40,11 +40,24 @@ window.addEventListener("click", function (e) {
     toggle_menu();
   }
 });
+const checkifnotburger = (e) =>{
+  // console.log(e.target);
+  // window.addEventListener("mouseover", function (e) {
+  //   if (!(e.target.classList.contains(".burger_mobile"))&&!(e.target.classList.contains(".nav_mobile"))){
+      toggle_menu();
+    // }
+  // })
+}
 
 document
   .querySelector(".logo_container")
   .addEventListener("click", toggle_menu);
 document.querySelector(".burger_mobile").addEventListener("click", toggle_menu);
+document.querySelector(".logo_container").addEventListener("mouseenter", toggle_menu);
+document.querySelector(".nav_mobile").addEventListener("mouseleave", checkifnotburger);
+
+
+
 
 function playAnimationBurger() {
   console.log("test anim");
@@ -53,7 +66,7 @@ function playAnimationBurger() {
   const svgatorElement = svgatorDocument.getElementById("bottom");
   const svgatorElement2 = svgatorDocument.getElementById("top");
   const svgatorElement3 = svgatorDocument.getElementById("middle");
-
+  document.querySelector(".burger_mobile").classList.toggle("close_burger")
   svgatorElement.classList.toggle("rotation_bottom");
   svgatorElement2.classList.toggle("rotation_top");
   svgatorElement3.classList.toggle("invisible");
@@ -63,9 +76,9 @@ function toggle_menu() {
   playAnimationBurger();
   console.log("fonc lancée");
 
-  if (window.innerWidth >= 429) {
-    window.scrollBy(0, -1 * document.documentElement.scrollTop);
-  } else {
+  // if (window.innerWidth >= 429) {
+  //   window.scrollBy(0, -1 * document.documentElement.scrollTop);
+  // } else {
     var init = 1;
     if (
       document
@@ -98,7 +111,6 @@ function toggle_menu() {
       $(about_curve).arctext({ radius: 150, dir: -1 });
       $(p).arctext({ radius: 80, dir: -1 });
 
-      // $(l).arctext({ radius: 100, dir: -1 });
     }, 800);
     if (
       !document
@@ -145,7 +157,7 @@ function toggle_menu() {
         document.querySelector("#p").classList.toggle("menu_active_visible");
         document.querySelector("#b").classList.toggle("menu_active_visible");
       }, 900);
-    }
+    // }
   }
 }
 
