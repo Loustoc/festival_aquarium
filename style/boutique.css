@@ -151,7 +151,7 @@ nav ul li {
   list-style: none;
   height: 100px;
 }
-nav ul li:hover > img {
+nav ul li:hover > :only-child {
   filter: opacity(0.5);
   transition: all 0.5s;
 }

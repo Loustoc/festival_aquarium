@@ -26,6 +26,7 @@
         <!-- <div class="logo_nav"> -->
             <!-- <div class="invisible logo_container"> -->
                 <object
+                onload="init_caddie()"
                 data="img/aquarium_logo_new.svg"
                 type="image/svg+xml"
                 id="logo"
@@ -39,9 +40,15 @@
     <script src="/js/nav.js"></script>
 <!-- </div> -->
 <ul>
-    <li><img src="img/boutique/cart.svg" alt=""></li>
+    <li>
+        <object
+        data="img/boutique/cart.svg"
+        type="image/svg+xml"
+        id="cart_img"
+        ></object>
+    </li>
     <li><img src="img/boutique/shirt.svg" alt=""></li>
-    <li><img src="img/boutique/accessories.svg" alt=""></li>
+    <li><img id="cart_img" src="img/boutique/accessories.svg" alt=""></li>
 
 </ul>
 </nav>
@@ -136,8 +143,8 @@
 </article>
 
 
-<script src="/js/boutique.js"></script>
 </main>
+<script src="/js/boutique.js"></script>
 
 </body>
 </html>
