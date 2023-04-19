@@ -695,6 +695,10 @@ article {
   right: 0;
   height: 100px;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .soutiens h5 {
@@ -703,6 +707,8 @@ article {
 }
 
 .logos_org_container {
+  width: 70%;
+  max-width: 600px;
   display: flex;
   gap: 20px;
   justify-content: space-around;
