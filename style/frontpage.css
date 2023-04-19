@@ -793,13 +793,18 @@ article {
   gap: 30px;
   flex-direction: column;
 }
+
+#trailer{
+  margin: 30px;
+  border-radius: 10px;
+}
 .info_bubble {
   top: 200vh;
-  max-width: 280px;
+  max-width: 450px;
   position: fixed;
   flex-direction: column;
   width: 70vw;
-  padding-top: 20px;
+  padding-top: 40px;
   border-radius: 20px;
   height: fit-content;
   transition: 1s;
@@ -995,6 +1000,9 @@ article {
 }
 
 .close_bubble {
+  position: absolute;
+  top: 0;
+  right: 10px;
   margin-top: 10px;
   width: 30px;
   height: 30px;
