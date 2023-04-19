@@ -52,7 +52,7 @@ const testNav = () => {
     document.querySelector(".start_article").style.minHeight =
       "-webkit-fill-available";
   }
-   if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgentData.mobile){
+   if (navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgentData.mobile || typeof screen.orientation !== 'undefined'){
     isMobileDevice = true;
     document.querySelector(".info_bubble").classList.add("info_bubble_mobile");
     document.querySelector(".info_bubble_mobile").classList.remove("info_bubble");
