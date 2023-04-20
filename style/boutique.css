@@ -27,7 +27,14 @@ select {
   content: 1;
   background-color: #f1f1f1;
 }
-
+.clicked::after{
+   transition: all 0.5s;
+  opacity: 0;
+}
+.clicked{
+  transform: translateY(4px);
+  transition: all 0.5s;
+}
 .acheter:hover {
   transform: translateY(4px);
   transition: all 0.5s;
@@ -35,6 +42,17 @@ select {
 .acheter:hover::after {
   transition: all 0.5s;
   opacity: 0;
+}
+.close_panier_fenetre{
+  width: 50px;
+  left: 190px;
+  top: 20px;
+  position: fixed;
+  z-index: 9999999999999;
+  /* bottom:-30px; */
+  padding: 10px;
+  border-radius: 40px;
+  background-color: #30405f;
 }
 .acheter::after {
   transform: translateZ(-3px) translateY(4px);
@@ -230,7 +248,13 @@ nav ul li::after {
   content: "";
   background-color: #222e46;
 }
+.clicked > :only-child{
+  opacity: 0.5;
+}
 nav ul li img {
+  z-index: 9;
+  transform-style: preserve-3d;
+  position: relative;
   width: 35px;
 }
 .nav_links {

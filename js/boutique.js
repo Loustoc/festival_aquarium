@@ -5,6 +5,8 @@ const achat = {
 };
 const ACHETER_BUTTON = document.querySelectorAll(".acheter");
 const panier = document.querySelector(".panier");
+const navButtons = document.querySelectorAll(".nav_button");
+
 let caddie_img;
 let caddie_svg_html;
 let elem_cart;
@@ -109,3 +111,19 @@ ACHETER_BUTTON.forEach((bouton_achat) => {
     cart_anim();
   });
 });
+
+document.querySelectorAll("li").forEach(bouton => {
+  bouton.addEventListener("click",()=>{
+    bouton.classList.toggle("clicked");
+  })
+})
+
+// navButtons.forEach(bouton => {
+//   bouton.addEventListener("click",()=>{
+//     console.log("bouton clicked");
+//     bouton.parentElement.classList.toggle("clicked");
+//   })
+// })
+document.getElementById("cart_img").addEventListener("click",(e)=>{
+  e.parentElement.classList.toggle("clicked");
+})
