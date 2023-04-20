@@ -103,7 +103,6 @@ ACHETER_BUTTON.forEach((bouton_achat) => {
   bouton_achat.addEventListener("click", (e) => {
     for (i = 0; i < ACHETER_BUTTON.length; i++) {
       if (ACHETER_BUTTON[i] == e.target) {
-        // console.log(i);
         ajout_panier(i, parseInt(array_nb[i].value));
       }
     }
