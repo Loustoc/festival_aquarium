@@ -18,7 +18,7 @@
   z-index: 999999999999999999;
   top: 0;
   transform-origin: center;
-  /* transform: translate(calc(50vw - 50%), calc(50vh - 50%)); */
+  transform: translate(calc(50vw - 50%), calc(50vh - 50%));
 }
 .fadein_vid {
   transition: 1s;
@@ -38,6 +38,9 @@
   /* animation-fill-mode: forwards; */
 }
 .cont_anim{
+  display: flex;
+  justify-content: center;
+  align-content: center;
   position: fixed;
   top: 0;
   left: 0;
