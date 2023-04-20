@@ -17,7 +17,7 @@ setTimeout(()=>{nav_closed = false;},1000);
 
 window.addEventListener("touchmove", (e) => {
   if (
-    !e.target.parentNode.parentNode.parentNode.classList.contains(classvisible)
+    !e.target.parentNode.parentNode.parentNode.classList.contains(classvisible) 
   ) {
     console.log(e.target);
     if (scrolling == 0) {
@@ -64,8 +64,9 @@ window.addEventListener("touchmove", (e) => {
 });
 
 addEventListener("wheel", (e) => {
+  console.log(e.target);
   if (
-    !e.target.parentNode.parentNode.parentNode.classList.contains(classvisible)
+    !e.target.parentNode.parentNode.parentNode.classList.contains("info") 
   ) {
     // console.log(e.deltaY);
     offset_scroll = e.deltaY;

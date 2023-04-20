@@ -332,10 +332,8 @@ nav ul li {
 nav {
   transform: translateY(40px);
 }
+
 @media screen and (max-width: 428px) {
-  .desktop {
-    display: none !important;
-  }
   .swiper-button-next {
     display: none !important;
   }
@@ -363,7 +361,12 @@ nav {
     transform: translateY(40px);
   } */
 }
-@media screen and (min-width: 429px) {
+@media screen and (max-width:889px){
+  .desktop{
+    display: none !important;
+  }
+}
+@media screen and (min-width:890px){
   .info {
     width: fit-content;
     height: fit-content !important;
@@ -381,6 +384,10 @@ nav {
   .mobile {
     display: none !important;
   }
+ 
+}
+@media screen and (min-width: 429px) {
+ 
   .close_burger {
     transform: translate(calc(50vw - 50%), 30px) !important;
 
