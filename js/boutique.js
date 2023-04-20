@@ -9,6 +9,7 @@ let caddie_img;
 let caddie_svg_html;
 let elem_cart;
 let pastille;
+let boutons_close;
 let contenu_caddie = [0, 0, 0, 0, 0];
 const nb_1 = document.getElementById("combien1");
 const nb_2 = document.getElementById("combien2");
@@ -35,14 +36,24 @@ const init_caddie = () => {
 const maj_panier = () => {
   panier.innerHTML = "";
   for (i = 0; i < contenu_caddie.length; i++) {
-    if (contenu_caddie[i] != 0){
+    if (contenu_caddie[i] != 0) {
       console.log("test");
       let article_panier = document.createElement("div");
       article_panier.classList.add("article_panier");
       panier.appendChild(article_panier);
-      article_panier.innerHTML=`<h2>${contenu_caddie[i].quoi}</h2>`;
+      article_panier.innerHTML = `<h2>${contenu_caddie[i].quoi}</h2> <img class="panier_close" data-produit="${i}" src="img/close.svg">`;
     }
   }
+  boutons_close = document.querySelectorAll(".panier_close");
+  boutons_close.forEach((close) => {
+    close.addEventListener("click", (e) => {
+      console.log("closed");
+      contenu_caddie[e.target.dataset.produit]=0;
+      cart_anim();
+      console.log(contenu_caddie);
+      maj_panier();
+    });
+  });
 };
 
 const ajout_panier = (i, nombre) => {
@@ -72,14 +83,16 @@ const ajout_panier = (i, nombre) => {
     objet.quoi = "T-Shirt";
     contenu_caddie[4] = objet;
   }
-  
-  maj_panier();
 
+  maj_panier();
 };
 
 const cart_anim = () => {
-  if (contenu_caddie != [0, 0, 0, 0, 0]) {
+  if (!(contenu_caddie.every(item => item === 0))) {
     pastille.style.opacity = 1;
+  }
+  else{
+    pastille.style.opacity = 0;
   }
   elem_cart.classList.toggle("anim");
   setTimeout(() => {
