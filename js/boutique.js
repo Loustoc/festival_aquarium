@@ -7,6 +7,9 @@ const ACHETER_BUTTON = document.querySelectorAll(".acheter");
 const panier = document.querySelector(".panier");
 const navButtons = document.querySelectorAll(".nav_button");
 const close_panier = document.querySelector(".close_panier_fenetre");
+const acc = document.querySelectorAll(".accessories");
+const clothes = document.querySelectorAll(".clothes");
+const cont_produits = document.querySelector(".container_produits");
 
 let caddie_img;
 let caddie_svg_html;
@@ -113,20 +116,38 @@ ACHETER_BUTTON.forEach((bouton_achat) => {
   });
 });
 
-document.querySelectorAll("li").forEach(bouton => {
-  bouton.addEventListener("click",(e)=>{
-    if (e.currentTarget == document.querySelectorAll("li")[0])
-    {
+document.querySelectorAll("li").forEach((bouton) => {
+  bouton.addEventListener("click", (e) => {
+    if (e.currentTarget == document.querySelectorAll("li")[0]) {
       panier.classList.toggle("panier_invisible");
-   close_panier.classList.toggle("panier_invisible");
-
+      close_panier.classList.toggle("panier_invisible");
+    } else if (e.currentTarget == document.querySelectorAll("li")[1]) {
+      acc.forEach((accessoire) => {
+        setTimeout(() => {
+          accessoire.classList.toggle("produit_invisible");
+        }, 500);
+      });
+      cont_produits.classList.toggle("invisible");
+      setTimeout(() => {
+        cont_produits.classList.toggle("invisible");
+      }, 1000);
+    } else if (e.currentTarget == document.querySelectorAll("li")[2]) {
+      clothes.forEach((vet) => {
+        setTimeout(() => {
+          vet.classList.toggle("produit_invisible");
+        }, 500);
+      });
+      cont_produits.classList.toggle("invisible");
+      setTimeout(() => {
+        cont_produits.classList.toggle("invisible");
+      }, 1000);
     }
     bouton.classList.toggle("clicked");
-  })
-})
+  });
+});
 
-close_panier.addEventListener("click", ()=>{
+close_panier.addEventListener("click", () => {
   panier.classList.toggle("panier_invisible");
   close_panier.classList.toggle("panier_invisible");
   document.querySelectorAll("li")[0].classList.toggle("clicked");
-})
+});

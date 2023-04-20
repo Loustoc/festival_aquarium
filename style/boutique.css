@@ -110,11 +110,13 @@ select {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  transition: all 0.5s;
   padding: 30px;
   overflow: scroll;
 }
 .produits {
   transform: translate(5px, 5px);
+  transition: all 1s;
   width: calc((100vw - 230px - 100px) / 2);
   height: calc((100vh - 60px - 110px) / 2);
   /* width: 250px; */
@@ -170,6 +172,12 @@ nav ul li {
   text-decoration: none;
   list-style: none;
   height: 100px;
+}
+.produit_invisible{
+  /* width: 0px;
+  height: 0px; */
+  display: none;
+  transition: all 1s;
 }
 .panier {
   top: 30px;
@@ -359,7 +367,7 @@ body {
 
 .invisible {
   opacity: 0;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .bloc_ex {
