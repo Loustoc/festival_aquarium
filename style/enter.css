@@ -37,7 +37,7 @@
   /* animation-duration: 0.5s; */
   /* animation-fill-mode: forwards; */
 }
-.cont_anim{
+.cont_anim {
   display: flex;
   justify-content: center;
   align-content: center;

@@ -1112,6 +1112,7 @@ article {
 }
 
 .choix_jour_programme {
+  transform: translateY(20px);
   display: flex;
   width: 100vw;
   gap: 20px;
