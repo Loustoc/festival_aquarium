@@ -141,6 +141,7 @@ body {
 @keyframes anim_scaled {
   to {
     scale: 0;
+    transform: translate(calc(50vw - 50%),calc(50vH - 50%));
   }
 }
 
