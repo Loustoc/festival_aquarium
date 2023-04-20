@@ -367,6 +367,15 @@ nav {
   }
 }
 @media screen and (min-width:890px){
+  .content_about{
+    width: 90%!important;
+    padding-left: 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
   .info {
     width: fit-content;
     height: fit-content !important;

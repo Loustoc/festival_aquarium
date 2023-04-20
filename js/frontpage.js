@@ -66,7 +66,7 @@ window.addEventListener("touchmove", (e) => {
 addEventListener("wheel", (e) => {
   console.log(e.target);
   if (
-    !e.target.parentNode.parentNode.parentNode.classList.contains("info") 
+    !(e.target.parentNode.parentNode.parentNode.classList.contains("info"))
   ) {
     // console.log(e.deltaY);
     offset_scroll = e.deltaY;
