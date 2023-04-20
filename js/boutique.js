@@ -125,3 +125,8 @@ document.querySelectorAll("li").forEach(bouton => {
   })
 })
 
+close_panier.addEventListener("click", ()=>{
+  panier.classList.toggle("panier_invisible");
+  close_panier.classList.toggle("panier_invisible");
+  document.querySelectorAll("li")[0].classList.toggle("clicked");
+})
