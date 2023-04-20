@@ -156,7 +156,10 @@ function engagement() {
 function about_fest() {
   document.querySelector(".about_fest").classList.toggle(classvisible);
 }
+function programme_pdf(){
+  window.open("./Programmation.pdf", "_blank");
 
+}
 function reco() {
   window.open("./precautions_et_recommandations.pdf", "_blank");
 }
