@@ -6,9 +6,7 @@
 
 /* nav*/
 
-html {
-  overflow: hidden;
-}
+
 
 nav::before {
   width: 100%;
@@ -93,6 +91,7 @@ select{
   flex-wrap: wrap;
   gap: 30px;
   padding: 30px;
+  overflow: scroll;
 }
 .produits {
   transform: translate(5px, 5px);
@@ -150,6 +149,15 @@ nav ul li {
   text-decoration: none;
   list-style: none;
   height: 100px;
+}
+.panier{
+  top: 50px;
+  position: fixed;
+  height: 300px;
+  left: 300px;
+  width: 600px;
+  background-color: red;
+  z-index: 999999999999;
 }
 nav ul li:hover > :only-child {
   filter: opacity(0.5);
