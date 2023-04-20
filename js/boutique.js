@@ -8,7 +8,7 @@ const ACHETER_BUTTON = document.querySelectorAll(".acheter");
 let caddie_img;
 let caddie_svg_html;
 let elem_cart;
-// let pastille;
+let pastille;
 let contenu_caddie = [0,0,0,0];
 const nb_1 = document.getElementById("combien1");
 const nb_2 = document.getElementById("combien2");
