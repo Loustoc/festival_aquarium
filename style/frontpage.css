@@ -7,7 +7,7 @@
 /* nav*/
 .burger_mobile {
   position: fixed;
-  z-index: 99999999999999999999999;
+  z-index: 99999999;
   width: 40px;
   transform: translate(calc(50vw - 50%), 10px);
 }
@@ -94,7 +94,11 @@ nav ul li {
     backdrop-filter: blur(6px);
   }
 }
-
+.scale_cont{
+  transform-origin: center;
+  transform: scale(0);
+  transition:1s;
+}
 .scroll_disabled {
   overflow: hidden;
 }

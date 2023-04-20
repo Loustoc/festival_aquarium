@@ -4,7 +4,7 @@ var isMobileDevice = false;
 var classvisible;
 var classbubble;
 var userAgent = new UserAgent().parse(navigator.userAgent);
-
+const cont_anim = document.querySelector(".cont_anim");
 var home_page = false;
 setTimeout(function () {
   document.querySelector("#festival_typo").classList.remove("invisible");
@@ -17,7 +17,7 @@ function open_website() {
     let anim = document.createElement("img");
 
     anim.classList.add("fadein_vid");
-    document.body.appendChild(anim);
+    cont_anim.appendChild(anim);
     anim.src = "/img/anim.gif";
     setTimeout(function () {
       anim.classList.remove("fadein_vid");
@@ -28,11 +28,14 @@ function open_website() {
       home_page = true;
       setTimeout(function () {
         anim.classList.add("fadeout_vid");
+        document.querySelector(".cont_anim").classList.add("scale_cont");
         cache_home.classList.add("invisible");
         cache_home.style.zIndex = -9999;
         setTimeout(function () {
           document.querySelector(".container_enter").remove();
           document.querySelector(".cache_home").remove();
+          document.querySelector(".cont_anim").remove();
+
         }, 1000);
       }, 2000);
     }, 1000);
@@ -48,11 +51,13 @@ function open_website() {
       home_page = true;
       setTimeout(function () {
         anim.classList.add("fadeout_vid");
+        document.querySelector(".cont_anim").classList.add("scale_cont");
         cache_home.classList.add("invisible");
         cache_home.style.zIndex = -9999;
         setTimeout(function () {
           document.querySelector(".container_enter").remove();
           document.querySelector(".cache_home").remove();
+          document.querySelector(".cont_anim").remove();
         }, 1000);
       }, 2000);
     }, 1000);
