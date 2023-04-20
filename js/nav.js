@@ -5,11 +5,13 @@ setTimeout(function () {
   document.querySelector(".logo_container").classList.remove("invisible");
 }, 1000);
 
+if (IS_SHOP == false) {
 setInterval(checkvid, 10);
 function checkvid() {
   if (!document.querySelector("video").playing == true) {
     document.querySelector("video").play();
   }
+}
 }
 
 // window.addEventListener("scroll", function (e) {
