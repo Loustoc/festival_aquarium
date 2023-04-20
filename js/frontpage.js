@@ -227,14 +227,14 @@ function troisconsos(e) {
     }px - 63px),-3px`;
     pastilles[0].style.width = `
 68px`;
-    prix_slide[0].style.transform = `translate(-50%)`;
+    prix_slide[0].style.transform = `translate(-100%)`;
   } else {
     pastilles[1].style.transform = `translate(calc(${
       document.querySelectorAll(".choix_conso")[1].getBoundingClientRect().width
     }px - 63px),-3px`;
     pastilles[1].style.width = `
 68px`;
-    prix_slide[1].style.transform = `translate(-50%)`;
+    prix_slide[1].style.transform = `translate(-100%)`;
   }
 }
 
@@ -242,10 +242,10 @@ function pasconsos(e) {
   if (e.target.parentNode.parentNode == liste_pass[0]) {
     pastilles[0].style.transform = `translate(-10px,-3px)`;
     pastilles[0].style.width = `100px`;
-    prix_slide[0].style.transform = `translate(50%)`;
+    prix_slide[0].style.transform = `translate(0%)`;
   } else {
     pastilles[1].style.transform = `translate(-10px,-3px)`;
     pastilles[1].style.width = `100px`;
-    prix_slide[1].style.transform = `translate(50%)`;
+    prix_slide[1].style.transform = `translate(0%)`;
   }
 }
