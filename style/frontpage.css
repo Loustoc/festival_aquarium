@@ -332,7 +332,11 @@ nav ul li {
 nav {
   transform: translateY(40px);
 }
-
+.boutons_liens{
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
 @media screen and (max-width: 428px) {
   .swiper-button-next {
     display: none !important;
