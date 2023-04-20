@@ -150,11 +150,12 @@ nav ul li {
   height: 100px;
 }
 .panier {
-  top: 50px;
+  top: 30px;
   position: fixed;
-  left: 300px;
+  left: 200px;
   width: 400px;
-  background-color: red;
+  height: 340px;
+  background-color: #30405f;
   z-index: 999999999999;
   border-radius: 30px;
   padding: 20px;
@@ -162,6 +163,9 @@ nav ul li {
   justify-content: top;
   align-items: center;
   flex-direction: column;
+  -webkit-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 8px 10px 0px rgba(0, 0, 0, 0.75);
 }
 .article_panier {
   border-radius: 30px;
@@ -170,16 +174,20 @@ nav ul li {
   padding-left: 20px;
   width: 90%;
   height: 50px;
-  background-color: rgb(31, 192, 122);
+  background-color: #445b8d;
   display: flex;
   /* justify-content: center; */
   align-items: center;
   position: relative;
 }
-.panier_close{
+.panier_close {
+  -webkit-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 8px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 50%;
   width: 30px;
   position: absolute;
-  margin:10px;
+  margin: 10px;
   right: 0;
 }
 nav ul li:hover > :only-child {

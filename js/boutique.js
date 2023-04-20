@@ -48,7 +48,7 @@ const maj_panier = () => {
   boutons_close.forEach((close) => {
     close.addEventListener("click", (e) => {
       console.log("closed");
-      contenu_caddie[e.target.dataset.produit]=0;
+      contenu_caddie[e.target.dataset.produit] = 0;
       cart_anim();
       console.log(contenu_caddie);
       maj_panier();
@@ -60,22 +60,22 @@ const ajout_panier = (i, nombre) => {
   if (i == 0) {
     let objet = Object.create(achat);
     objet.nombre = nombre;
-    objet.quoi = "gourde";
+    objet.quoi = "Gourde";
     contenu_caddie[0] = objet;
   } else if (i == 1) {
     let objet = Object.create(achat);
     objet.nombre = nombre;
-    objet.quoi = "tote bag";
+    objet.quoi = "Tote-Bag";
     contenu_caddie[1] = objet;
   } else if (i == 2) {
     let objet = Object.create(achat);
     objet.nombre = nombre;
-    objet.quoi = "coque de téléphone";
+    objet.quoi = "Coque pour Smartphone";
     contenu_caddie[2] = objet;
   } else if (i == 3) {
     let objet = Object.create(achat);
     objet.nombre = nombre;
-    objet.quoi = "sweat shirt";
+    objet.quoi = "Sweat Shirt";
     contenu_caddie[3] = objet;
   } else if (i == 4) {
     let objet = Object.create(achat);
@@ -88,10 +88,9 @@ const ajout_panier = (i, nombre) => {
 };
 
 const cart_anim = () => {
-  if (!(contenu_caddie.every(item => item === 0))) {
+  if (!contenu_caddie.every((item) => item === 0)) {
     pastille.style.opacity = 1;
-  }
-  else{
+  } else {
     pastille.style.opacity = 0;
   }
   elem_cart.classList.toggle("anim");
