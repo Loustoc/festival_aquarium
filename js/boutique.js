@@ -6,6 +6,7 @@ const achat = {
 const ACHETER_BUTTON = document.querySelectorAll(".acheter");
 const panier = document.querySelector(".panier");
 const navButtons = document.querySelectorAll(".nav_button");
+const close_panier = document.querySelector(".close_panier_fenetre");
 
 let caddie_img;
 let caddie_svg_html;
@@ -113,17 +114,14 @@ ACHETER_BUTTON.forEach((bouton_achat) => {
 });
 
 document.querySelectorAll("li").forEach(bouton => {
-  bouton.addEventListener("click",()=>{
+  bouton.addEventListener("click",(e)=>{
+    if (e.currentTarget == document.querySelectorAll("li")[0])
+    {
+      panier.classList.toggle("panier_invisible");
+   close_panier.classList.toggle("panier_invisible");
+
+    }
     bouton.classList.toggle("clicked");
   })
 })
 
-// navButtons.forEach(bouton => {
-//   bouton.addEventListener("click",()=>{
-//     console.log("bouton clicked");
-//     bouton.parentElement.classList.toggle("clicked");
-//   })
-// })
-document.getElementById("cart_img").addEventListener("click",(e)=>{
-  e.parentElement.classList.toggle("clicked");
-})
