@@ -5,6 +5,8 @@ var classvisible;
 var classbubble;
 var userAgent = new UserAgent().parse(navigator.userAgent);
 const cont_anim = document.querySelector(".cont_anim");
+const insta = document.querySelector(".insta");
+
 var home_page = false;
 setTimeout(function () {
   document.querySelector("#festival_typo").classList.remove("invisible");
@@ -40,6 +42,7 @@ function open_website() {
       }, 2000);
     }, 1000);
   } else {
+    insta.style.transform = "translate(calc(50vw - 50%),calc(100vh - 150px - 100%))";
     let anim = document.createElement("video");
     anim.src = "/anim.webm";
     anim.classList.add("vid_intro");
