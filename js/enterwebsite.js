@@ -43,7 +43,7 @@ function open_website() {
     let anim = document.createElement("video");
     anim.src = "/anim.webm";
     anim.classList.add("vid_intro");
-    document.body.appendChild(anim);
+    cont_anim.appendChild(anim);
     anim.play();
     anim.classList.add("anim_intro");
     document.querySelector(".container_enter").classList.add("slide_off");
