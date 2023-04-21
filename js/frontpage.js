@@ -250,3 +250,6 @@ function pasconsos(e) {
     prix_slide[1].style.transform = `translate(0%)`;
   }
 }
+const openInsta = () => {
+  window.open("https://www.instagram.com/aquarium.festival/", "_blank");
+}
