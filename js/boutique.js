@@ -1,15 +1,18 @@
 const IS_SHOP = true;
+const bouton_nav_mobile = document.querySelector(".nav_open_mobile");
 const achat = {
   nombre: 0,
   quoi: "",
 };
+const nav_mobile = document.querySelector(".mobile");
 const ACHETER_BUTTON = document.querySelectorAll(".acheter");
-const panier = document.querySelector(".panier");
+const panier = document.querySelectorAll(".panier");
 const navButtons = document.querySelectorAll(".nav_button");
 const close_panier = document.querySelector(".close_panier_fenetre");
 const acc = document.querySelectorAll(".accessories");
 const clothes = document.querySelectorAll(".clothes");
 const cont_produits = document.querySelector(".container_produits");
+const produits = document.querySelectorAll(".produits");
 
 let caddie_img;
 let caddie_svg_html;
@@ -40,13 +43,14 @@ const init_caddie = () => {
   }, 1000);
 };
 const maj_panier = () => {
-  panier.innerHTML = "";
+  if (window.innerWidth > 428){
+  panier[0].innerHTML = "";
   for (i = 0; i < contenu_caddie.length; i++) {
     if (contenu_caddie[i] != 0) {
       console.log("test");
       let article_panier = document.createElement("div");
       article_panier.classList.add("article_panier");
-      panier.appendChild(article_panier);
+      panier[0].appendChild(article_panier);
       article_panier.innerHTML = `<h2>${contenu_caddie[i].quoi}</h2> <img class="panier_close" data-produit="${i}" src="img/close.svg">`;
     }
   }
@@ -60,6 +64,29 @@ const maj_panier = () => {
       maj_panier();
     });
   });
+}
+else{
+  panier[1].innerHTML = "";
+  for (i = 0; i < contenu_caddie.length; i++) {
+    if (contenu_caddie[i] != 0) {
+      console.log("test");
+      let article_panier = document.createElement("div");
+      article_panier.classList.add("article_panier");
+      panier[1].appendChild(article_panier);
+      article_panier.innerHTML = `<h2>${contenu_caddie[i].quoi}</h2> <img class="panier_close" data-produit="${i}" src="img/close.svg">`;
+    }
+  }
+  boutons_close = document.querySelectorAll(".panier_close");
+  boutons_close.forEach((close) => {
+    close.addEventListener("click", (e) => {
+      console.log("closed");
+      contenu_caddie[e.target.dataset.produit] = 0;
+      cart_anim();
+      console.log(contenu_caddie);
+      maj_panier();
+    });
+  });
+}
 };
 
 const ajout_panier = (i, nombre) => {
@@ -119,7 +146,12 @@ ACHETER_BUTTON.forEach((bouton_achat) => {
 document.querySelectorAll("li").forEach((bouton) => {
   bouton.addEventListener("click", (e) => {
     if (e.currentTarget == document.querySelectorAll("li")[0]) {
-      panier.classList.toggle("panier_invisible");
+      if (window.innerWidth > 428){
+              panier[0].classList.toggle("panier_invisible");
+      }
+      else{
+        panier[1].classList.toggle("panier_invisible");
+      }
       close_panier.classList.toggle("panier_invisible");
     } else if (e.currentTarget == document.querySelectorAll("li")[1]) {
       acc.forEach((accessoire) => {
@@ -147,7 +179,30 @@ document.querySelectorAll("li").forEach((bouton) => {
 });
 
 close_panier.addEventListener("click", () => {
-  panier.classList.toggle("panier_invisible");
+  if (window.innerWidth > 428){
+  panier[0].classList.toggle("panier_invisible");
+  }
+  else{
+  panier[1].classList.toggle("panier_invisible");
+
+  }
   close_panier.classList.toggle("panier_invisible");
   document.querySelectorAll("li")[0].classList.toggle("clicked");
 });
+
+produits.forEach((produit)=> {
+  produit.addEventListener("click", (e) => {
+  console.log(e.currentTarget);
+    e.currentTarget.children[1].classList.toggle("bandeau_produit_active");
+  });
+});
+
+// document.addEventListener("click", (e) => {
+//   console.log(e.target);
+// });
+
+bouton_nav_mobile.addEventListener("click", (e) => {
+  bouton_nav_mobile.classList.toggle("nav_open_button_active");
+  nav_mobile.classList.toggle("mobile_nav_active");
+}
+)
