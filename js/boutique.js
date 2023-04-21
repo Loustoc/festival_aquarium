@@ -204,5 +204,10 @@ produits.forEach((produit)=> {
 bouton_nav_mobile.addEventListener("click", (e) => {
   bouton_nav_mobile.classList.toggle("nav_open_button_active");
   nav_mobile.classList.toggle("mobile_nav_active");
+  if (!(nav_mobile.classList.contains("mobile_nav_active"))){
+    console.log("ferme");
+    panier[1].classList.add("panier_invisible");
+    document.querySelectorAll("li")[0].classList.toggle("clicked");
+  }
 }
 )
