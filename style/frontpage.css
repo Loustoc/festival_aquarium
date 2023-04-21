@@ -338,6 +338,7 @@ nav {
   flex-direction: column;
 }
 @media screen and (max-width: 428px) {
+ 
   .swiper-button-next {
     display: none !important;
   }

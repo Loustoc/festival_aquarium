@@ -417,6 +417,20 @@ main {
   transition: 1s;
 }
 @media screen and (max-width: 428px) {
+  .container_produits{
+    position: fixed !important;
+    width: 90vw !important;
+    transform: translate(5vw,30px);
+  }
+  .produits{
+    width:100% !important;
+  }
+  .panier{
+    display: none;
+  }
+  .close_panier_fenetre_mobile{
+    display: none;
+  }
   .swiper-button-next {
     display: none !important;
   }
